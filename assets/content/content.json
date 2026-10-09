@@ -1,0 +1,248 @@
+{
+  "about": {
+    "en": {
+      "history": "Tawana Foundation was founded to bring practical, respectful support to communities affected by conflict, displacement and poverty. Since our beginning, we have worked alongside local partners to deliver education, healthcare and long-term community programs.",
+      "mission": "To empower communities through education, health and sustainable development, with dignity and transparency.",
+      "vision": "A world where every community has the tools and support to build its own future.",
+      "values": "Integrity. Transparency. Respect. Long-term commitment. Local partnership.",
+      "countries": "Afghanistan · Russia ",
+      "timeline": [
+        { "year": "2026", "title": "Foundation established", "text": "Registered with a small team and one education project." }
+
+      ]
+    },
+    "ru": {
+      "history": "Фонд «Тавана» был основан, чтобы оказывать практическую и уважительную поддержку сообществам, затронутым конфликтами, перемещением и бедностью. С самого начала мы работаем вместе с местными партнёрами в области образования, здравоохранения и долгосрочных программ.",
+      "mission": "Расширять возможности сообществ через образование, здоровье и устойчивое развитие — с достоинством и прозрачностью.",
+      "vision": "Мир, где каждое сообщество имеет инструменты и поддержку для построения своего будущего.",
+      "values": "Честность. Прозрачность. Уважение. Долгосрочная приверженность. Местное партнёрство.",
+      "countries": "Афганистан · Россия",
+      "timeline": [
+        { "year": "2026", "title": "Основание фонда", "text": "Регистрация с небольшой командой и одним образовательным проектом." }
+      ]
+    },
+    "fa": {
+      "history": "بنیاد امید برای ارائه حمایت عملی و محترمانه از جوامعی که تحت تأثیر درگیری، آوارگی و فقر هستند تأسیس شد. از آغاز، در کنار شرکای محلی در حوزه آموزش، بهداشت و برنامه‌های بلندمدت جامعه کار کرده‌ایم.",
+      "mission": "توانمندسازی جوامع از طریق آموزش، بهداشت و توسعه پایدار، با کرامت و شفافیت.",
+      "vision": "جهانی که در آن هر جامعه ابزار و حمایت لازم برای ساختن آینده خود را داشته باشد.",
+      "values": "صداقت. شفافیت. احترام. تعهد بلندمدت. مشارکت محلی.",
+      "countries": "افغانستان · روسیه",
+      "timeline": [
+        { "year": "۲۰۲۶", "title": "تأسیس بنیاد", "text": "ثبت با تیمی کوچک و یک پروژه آموزشی." }
+
+      ]
+    },
+    "ps": {
+      "history": "د امید بنسټ د دې لپاره جوړ شو چې هغو ټولنو ته عملي او درناوی‌شوي ملاتړ ورسوي چې د جګړې، بې‌ځایه کېدو او فقر له امله زیانمنې شوې دي. له پیل راهیسې مو د محلي شریکانو سره یوځای د زده کړې، روغتیا او اوږدمهاله ټولنیزو پروګرامونو په برخه کې کار کړی.",
+      "mission": "د زده کړې، روغتیا او دوامداره پرمختګ له لارې ټولنو ته پیاوړتیا ورکول، د کرامت او روڼتیا سره.",
+      "vision": "یوه نړۍ چې هر ټولنه خپل راتلونکی جوړولو لپاره وسایل او ملاتړ ولري.",
+      "values": "صداقت. روڼتیا. درناوی. اوږدمهاله ژمنه. محلي ملګرتیا.",
+      "countries": "افغانستان · روسیه",
+      "timeline": [
+        { "year": "۲۰۲۶", "title": "د بنسټ جوړول", "text": "د یوې کوچنۍ ډلې او یوې زده‌کړیزې پروژې سره ثبت." }
+      ]
+    }
+  },
+
+  "impact": {
+    "en": {
+      "stats": [
+        { "label": "Projects", "value": "10+" },
+        { "label": "People supported", "value": "5,000+" },
+        { "label": "Communities", "value": "12" },
+        { "label": "Countries", "value": "4" },
+        { "label": "Volunteers", "value": "80+" }
+      ],
+      "stories": [
+        { "title": "From a tent to a classroom", "text": "A displaced family in Kabul now has three children attending school through our education program." },
+        { "title": "A clinic that comes to you", "text": "Mobile clinics now reach four remote districts that had no medical access before." }
+      ]
+    },
+    "ru": {
+      "stats": [
+        { "label": "Проектов", "value": "10+" },
+        { "label": "Получили поддержку", "value": "5 000+" },
+        { "label": "Сообществ", "value": "12" },
+        { "label": "Стран", "value": "4" },
+        { "label": "Волонтёров", "value": "80+" }
+      ],
+      "stories": [
+        { "title": "Из палатки в класс", "text": "Трое детей перемещённой семьи в Кабуле теперь учатся в школе благодаря нашей образовательной программе." },
+        { "title": "Клиника, которая приезжает к вам", "text": "Мобильные клиники теперь работают в четырёх отдалённых районах, где раньше не было медицинской помощи." }
+      ]
+    },
+    "fa": {
+      "stats": [
+        { "label": "پروژه", "value": "+۱۰" },
+        { "label": "فرد حمایت‌شده", "value": "+۵٬۰۰۰" },
+        { "label": "جامعه", "value": "۱۲" },
+        { "label": "کشور", "value": "۴" },
+        { "label": "داوطلب", "value": "+۸۰" }
+      ],
+      "stories": [
+        { "title": "از چادر تا کلاس درس", "text": "سه فرزند یک خانواده آواره در کابل اکنون از طریق برنامه آموزشی ما به مدرسه می‌روند." },
+        { "title": "کلینیکی که به سراغ شما می‌آید", "text": "کلینیک‌های سیار اکنون به چهار منطقه دورافتاده که پیش‌تر دسترسی پزشکی نداشتند، می‌رسند." }
+      ]
+    },
+    "ps": {
+      "stats": [
+        { "label": "پروژې", "value": "+۱۰" },
+        { "label": "ملاتړ شوي خلک", "value": "+۵٬۰۰۰" },
+        { "label": "ټولنې", "value": "۱۲" },
+        { "label": "هېوادونه", "value": "۴" },
+        { "label": "رضاکاران", "value": "+۸۰" }
+      ],
+      "stories": [
+        { "title": "له خېمې څخه تر ټولګي", "text": "د کابل یوې بې‌ځایه شوې کورنۍ درې ماشومان اوس زموږ د زده‌کړې پروګرام له لارې ښوونځي ته ځي." },
+        { "title": "هغه کلینیک چې تاسو ته راځي", "text": "سیار کلینیکونه اوس څلورو لرې پرتو ولسوالیو ته رسېږي چې دمخه یې طبي لاسرسی نه درلود." }
+      ]
+    }
+  },
+
+  "programs": {
+    "en": [
+      { "id": "education", "title": "Education", "description": "Access to quality schooling for children in underserved communities.", "objectives": "Enroll children · Train teachers · Provide materials", "impact": "2,500 students supported" },
+      { "id": "healthcare", "title": "Healthcare", "description": "Mobile clinics and preventive care for remote areas.", "objectives": "Mobile clinics · Maternal care · Vaccination", "impact": "1,200 people reached" },
+      { "id": "humanitarian", "title": "Humanitarian aid", "description": "Emergency response for displaced and vulnerable families.", "objectives": "Food · Shelter · Winter kits", "impact": "600 families assisted" },
+      { "id": "community", "title": "Community development", "description": "Local initiatives that create lasting self-reliance.", "objectives": "Water · Infrastructure · Livelihoods", "impact": "35 local initiatives" },
+      { "id": "women", "title": "Women's empowerment", "description": "Skills, literacy and small-business support for women.", "objectives": "Literacy · Vocational training · Micro-grants", "impact": "400 women trained" },
+      { "id": "youth", "title": "Youth development", "description": "Leadership, technology and mentorship for young people.", "objectives": "Coding · Leadership · Mentoring", "impact": "300 youth engaged" }
+    ],
+    "ru": [
+      { "id": "education", "title": "Образование", "description": "Доступ к качественному образованию для детей в малообеспеченных сообществах.", "objectives": "Зачисление детей · Обучение учителей · Материалы", "impact": "2 500 учащихся" },
+      { "id": "healthcare", "title": "Здравоохранение", "description": "Мобильные клиники и профилактика в отдалённых районах.", "objectives": "Мобильные клиники · Материнская помощь · Вакцинация", "impact": "1 200 человек" },
+      { "id": "humanitarian", "title": "Гуманитарная помощь", "description": "Экстренная помощь перемещённым и уязвимым семьям.", "objectives": "Еда · Жильё · Зимние наборы", "impact": "600 семей" },
+      { "id": "community", "title": "Развитие сообществ", "description": "Местные инициативы, создающие устойчивую самостоятельность.", "objectives": "Вода · Инфраструктура · Средства к существованию", "impact": "35 инициатив" },
+      { "id": "women", "title": "Расширение прав женщин", "description": "Навыки, грамотность и поддержка малого бизнеса для женщин.", "objectives": "Грамотность · Профподготовка · Микрогранты", "impact": "400 женщин" },
+      { "id": "youth", "title": "Развитие молодёжи", "description": "Лидерство, технологии и наставничество для молодёжи.", "objectives": "Программирование · Лидерство · Наставничество", "impact": "300 молодых людей" }
+    ],
+    "fa": [
+      { "id": "education", "title": "آموزش", "description": "دسترسی به آموزش باکیفیت برای کودکان در جوامع کم‌برخوردار.", "objectives": "ثبت‌نام کودکان · آموزش معلمان · تأمین مواد", "impact": "۲٬۵۰۰ دانش‌آموز" },
+      { "id": "healthcare", "title": "بهداشت", "description": "کلینیک‌های سیار و مراقبت‌های پیشگیرانه در مناطق دورافتاده.", "objectives": "کلینیک سیار · مراقبت مادران · واکسیناسیون", "impact": "۱٬۲۰۰ نفر" },
+      { "id": "humanitarian", "title": "کمک‌های بشردوستانه", "description": "واکنش اضطراری برای خانواده‌های آواره و آسیب‌پذیر.", "objectives": "غذا · سرپناه · بسته‌های زمستانی", "impact": "۶۰۰ خانواده" },
+      { "id": "community", "title": "توسعه جامعه", "description": "ابتکارات محلی که خودکفایی پایدار ایجاد می‌کنند.", "objectives": "آب · زیرساخت · معیشت", "impact": "۳۵ ابتکار محلی" },
+      { "id": "women", "title": "توانمندسازی زنان", "description": "مهارت‌آموزی، سوادآموزی و حمایت از کسب‌وکارهای کوچک زنان.", "objectives": "سواد · آموزش حرفه‌ای · کمک‌هزینه", "impact": "۴۰۰ زن" },
+      { "id": "youth", "title": "توسعه جوانان", "description": "رهبری، فناوری و راهنمایی برای جوانان.", "objectives": "برنامه‌نویسی · رهبری · راهنمایی", "impact": "۳۰۰ جوان" }
+    ],
+    "ps": [
+      { "id": "education", "title": "زده کړه", "description": "د کم‌امکاناته ټولنو ماشومانو لپاره د باکیفیته زده کړې لاسرسی.", "objectives": "د ماشومانو نوم لیکنه · د ښوونکو روزنه · د توکو برابرول", "impact": "۲٬۵۰۰ زده کوونکي" },
+      { "id": "healthcare", "title": "روغتیا", "description": "په لرې پرتو سیمو کې سیار کلینیکونه او مخنیوی پالنه.", "objectives": "سیار کلینیک · د میندو پالنه · واکسین", "impact": "۱٬۲۰۰ خلک" },
+      { "id": "humanitarian", "title": "بشردوستانه مرستې", "description": "د بې‌ځایه شوو او زیانمنو کورنیو لپاره بېړنی ځواب.", "objectives": "خواړه · سرپنا · ژمي بستې", "impact": "۶۰۰ کورنۍ" },
+      { "id": "community", "title": "د ټولنې پرمختګ", "description": "محلي نوښتونه چې دوامداره ځان بسیاینې رامنځته کوي.", "objectives": "اوبه · زیربنا · معیشت", "impact": "۳۵ محلي نوښتونه" },
+      { "id": "women", "title": "د ښځو پیاوړتیا", "description": "د ښځو لپاره مهارتونه، سواد او د کوچنیو کاروبارونو ملاتړ.", "objectives": "سواد · مسلکي روزنه · کوچنۍ مرستې", "impact": "۴۰۰ ښځې" },
+      { "id": "youth", "title": "د ځوانانو پرمختګ", "description": "د ځوانانو لپاره مشرتابه، ټکنالوژي او لارښوونه.", "objectives": "پروګرام جوړول · مشرتابه · لارښوونه", "impact": "۳۰۰ ځوانان" }
+    ]
+  },
+
+  "projects": {
+    "en": [
+      { "id": "education-for-all", "title": "Education for All", "description": "Building and equipping community schools in remote districts.", "longDescription": "This project provides safe learning spaces, trained teachers and school supplies to children who would otherwise have no access to education.", "challenge": "Thousands of children in remote districts have no safe place to learn.", "approach": "We build and equip community schools and train local teachers.", "results": "Four schools opened; over 1,200 students enrolled.", "category": "Education", "location": "Kabul, Afghanistan", "status": "active", "image": "assets/images/projects/education-01.jpg", "beneficiaries": 1200, "progress": 0.65, "goal": "$250,000", "startDate": "2024-01-15" },
+      { "id": "mobile-clinics", "title": "Mobile Health Clinics", "description": "Bringing medical care to communities without a clinic.", "longDescription": "Mobile clinics travel to remote villages on a fixed schedule, offering general care, maternal health and vaccinations at no cost.", "challenge": "Four districts have no permanent medical facility.", "approach": "Two mobile units visit each district weekly.", "results": "Over 1,200 patients treated in the first year.", "category": "Healthcare", "location": "Balkh, Afghanistan", "status": "active", "image": "assets/images/projects/healthcare-01.jpg", "beneficiaries": 1200, "progress": 0.4, "goal": "$180,000", "startDate": "2023-09-01" },
+      { "id": "winter-relief", "title": "Winter Relief 2024", "description": "Emergency kits for displaced families facing the winter.", "longDescription": "Distribution of blankets, heating fuel, warm clothing and food baskets to families in temporary shelters.", "challenge": "Harsh winters threaten families living in temporary shelters.", "approach": "Community-verified distribution of winter kits.", "results": "600 families received winter kits.", "category": "Humanitarian", "location": "Nangarhar, Afghanistan", "status": "completed", "image": "assets/images/projects/relief-01.jpg", "beneficiaries": 3000, "progress": 1.0, "goal": "$120,000", "startDate": "2023-11-01" },
+      { "id": "water-for-villages", "title": "Water for Villages", "description": "Clean water wells and hygiene training for rural villages.", "longDescription": "Construction of deep wells and community hygiene education to reduce water-borne disease.", "challenge": "Villages rely on unsafe surface water.", "approach": "Deep wells + hygiene training + local maintenance teams.", "results": "Six wells drilled serving over 2,000 people.", "category": "Community Development", "location": "Kunduz, Afghanistan", "status": "upcoming", "image": "assets/images/projects/water-01.jpg", "beneficiaries": 2000, "progress": 0.0, "goal": "$90,000", "startDate": "2025-03-01" }
+    ],
+    "ru": [
+      { "id": "education-for-all", "title": "Образование для всех", "description": "Строительство и оснащение школ в отдалённых районах.", "longDescription": "Проект обеспечивает безопасные учебные пространства, обученных учителей и школьные принадлежности для детей, которые иначе не имели бы доступа к образованию.", "challenge": "Тысячи детей в отдалённых районах не имеют безопасного места для учёбы.", "approach": "Мы строим и оснащаем школы и обучаем местных учителей.", "results": "Открыто четыре школы; зачислено более 1 200 учеников.", "category": "Образование", "location": "Кабул, Афганистан", "status": "active", "image": "assets/images/projects/education-01.jpg", "beneficiaries": 1200, "progress": 0.65, "goal": "$250 000", "startDate": "2024-01-15" },
+      { "id": "mobile-clinics", "title": "Мобильные клиники", "description": "Медицинская помощь сообществам без клиники.", "longDescription": "Мобильные клиники по расписанию приезжают в отдалённые деревни, предлагая общую терапию, охрану материнства и вакцинацию бесплатно.", "challenge": "В четырёх районах нет постоянного медицинского учреждения.", "approach": "Два мобильных блока посещают каждый район еженедельно.", "results": "Более 1 200 пациентов за первый год.", "category": "Здравоохранение", "location": "Балх, Афганистан", "status": "active", "image": "assets/images/projects/healthcare-01.jpg", "beneficiaries": 1200, "progress": 0.4, "goal": "$180 000", "startDate": "2023-09-01" },
+      { "id": "winter-relief", "title": "Зимняя помощь 2024", "description": "Экстренные наборы для перемещённых семей.", "longDescription": "Раздача одеял, топлива, тёплой одежды и продовольственных наборов семьям во временных убежищах.", "challenge": "Суровые зимы угрожают семьям во временных убежищах.", "approach": "Проверенная сообществом раздача зимних наборов.", "results": "600 семей получили наборы.", "category": "Гуманитарная помощь", "location": "Нангархар, Афганистан", "status": "completed", "image": "assets/images/projects/relief-01.jpg", "beneficiaries": 3000, "progress": 1.0, "goal": "$120 000", "startDate": "2023-11-01" },
+      { "id": "water-for-villages", "title": "Вода для деревень", "description": "Колодцы и гигиеническое обучение для сёл.", "longDescription": "Строительство глубоких колодцев и обучение гигиене для снижения заболеваний, передающихся через воду.", "challenge": "Деревни используют небезопасную поверхностную воду.", "approach": "Глубокие колодцы + обучение + местные бригады обслуживания.", "results": "Пробурено шесть колодцев, обслуживающих более 2 000 человек.", "category": "Развитие сообществ", "location": "Кундуз, Афганистан", "status": "upcoming", "image": "assets/images/projects/water-01.jpg", "beneficiaries": 2000, "progress": 0.0, "goal": "$90 000", "startDate": "2025-03-01" }
+    ],
+    "fa": [
+      { "id": "education-for-all", "title": "آموزش برای همه", "description": "ساخت و تجهیز مدارس جامعه در مناطق دورافتاده.", "longDescription": "این پروژه فضاهای امن یادگیری، معلمان آموزش‌دیده و لوازم مدرسه را برای کودکانی فراهم می‌کند که در غیر این صورت به آموزش دسترسی نداشتند.", "challenge": "هزاران کودک در مناطق دورافتاده جای امنی برای یادگیری ندارند.", "approach": "ما مدارس جامعه را می‌سازیم و تجهیز می‌کنیم و معلمان محلی را آموزش می‌دهیم.", "results": "چهار مدرسه افتتاح شد؛ بیش از ۱٬۲۰۰ دانش‌آموز ثبت‌نام کردند.", "category": "آموزش", "location": "کابل، افغانستان", "status": "active", "image": "assets/images/projects/education-01.jpg", "beneficiaries": 1200, "progress": 0.65, "goal": "۲۵۰٬۰۰۰ دالر", "startDate": "2024-01-15" },
+      { "id": "mobile-clinics", "title": "کلینیک‌های سیار", "description": "رساندن مراقبت پزشکی به جوامع بدون کلینیک.", "longDescription": "کلینیک‌های سیار طبق برنامه به روستاهای دورافتاده می‌روند و مراقبت عمومی، بهداشت مادران و واکسیناسیون را رایگان ارائه می‌دهند.", "challenge": "چهار منطقه هیچ مرکز پزشکی دائمی ندارند.", "approach": "دو واحد سیار هر هفته از هر منطقه بازدید می‌کنند.", "results": "بیش از ۱٬۲۰۰ بیمار در سال نخست.", "category": "بهداشت", "location": "بلخ، افغانستان", "status": "active", "image": "assets/images/projects/healthcare-01.jpg", "beneficiaries": 1200, "progress": 0.4, "goal": "۱۸۰٬۰۰۰ دالر", "startDate": "2023-09-01" },
+      { "id": "winter-relief", "title": "کمک زمستانی ۲۰۲۴", "description": "بسته‌های اضطراری برای خانواده‌های آواره.", "longDescription": "توزیع پتو، سوخت گرمایشی، لباس گرم و سبد غذایی به خانواده‌های ساکن در سرپناه‌های موقت.", "challenge": "زمستان‌های سخت خانواده‌های ساکن در سرپناه‌های موقت را تهدید می‌کند.", "approach": "توزیع تأییدشده توسط جامعه از بسته‌های زمستانی.", "results": "۶۰۰ خانواده بسته زمستانی دریافت کردند.", "category": "بشردوستانه", "location": "ننگرهار، افغانستان", "status": "completed", "image": "assets/images/projects/relief-01.jpg", "beneficiaries": 3000, "progress": 1.0, "goal": "۱۲۰٬۰۰۰ دالر", "startDate": "2023-11-01" },
+      { "id": "water-for-villages", "title": "آب برای روستاها", "description": "چاه‌های آب پاک و آموزش بهداشت برای روستاها.", "longDescription": "ساخت چاه‌های عمیق و آموزش بهداشت جامعه برای کاهش بیماری‌های ناشی از آب.", "challenge": "روستاها به آب سطحی ناایمن وابسته‌اند.", "approach": "چاه عمیق + آموزش بهداشت + تیم‌های تعمیر محلی.", "results": "شش چاه حفر شد که به بیش از ۲٬۰۰۰ نفر خدمت می‌کند.", "category": "توسعه جامعه", "location": "کندز، افغانستان", "status": "upcoming", "image": "assets/images/projects/water-01.jpg", "beneficiaries": 2000, "progress": 0.0, "goal": "۹۰٬۰۰۰ دالر", "startDate": "2025-03-01" }
+    ],
+    "ps": [
+      { "id": "education-for-all", "title": "ټولو لپاره زده کړه", "description": "په لرې پرتو ولسوالیو کې د ټولنې ښوونځیو جوړول او سمبالول.", "longDescription": "دا پروژه هغو ماشومانو ته د زده کړې خوندي ځایونه، روزل شوي ښوونکي او د ښوونځي توکي برابروي چې که نه نو زده کړې ته لاسرسی نه لري.", "challenge": "په لرې پرتو ولسوالیو کې زرګونه ماشومان د زده کړې خوندي ځای نه لري.", "approach": "موږ د ټولنې ښوونځي جوړوو او سمبالوو او محلي ښوونکي روزو.", "results": "څلور ښوونځي پرانیستل شول؛ له ۱٬۲۰۰ څخه ډېر زده کوونکي شامل شول.", "category": "زده کړه", "location": "کابل، افغانستان", "status": "active", "image": "assets/images/projects/education-01.jpg", "beneficiaries": 1200, "progress": 0.65, "goal": "۲۵۰٬۰۰۰ ډالر", "startDate": "2024-01-15" },
+      { "id": "mobile-clinics", "title": "سیار روغتیایي کلینیکونه", "description": "هغو ټولنو ته طبي پالنه رسول چې کلینیک نلري.", "longDescription": "سیار کلینیکونه په ټاکلې مهالوېش سره لرې پرتو کلو ته ځي او وړیا عمومي پالنه، د میندو روغتیا او واکسین برابروي.", "challenge": "څلور ولسوالۍ دایمي طبي مرکز نلري.", "approach": "دوه سیار واحدونه هره اونۍ هرې ولسوالۍ ته ځي.", "results": "په لومړي کال کې له ۱٬۲۰۰ څخه ډېر ناروغان درملنه شول.", "category": "روغتیا", "location": "بلخ، افغانستان", "status": "active", "image": "assets/images/projects/healthcare-01.jpg", "beneficiaries": 1200, "progress": 0.4, "goal": "۱۸۰٬۰۰۰ ډالر", "startDate": "2023-09-01" },
+      { "id": "winter-relief", "title": "ژمي مرسته ۲۰۲۴", "description": "د بې‌ځایه شوو کورنیو لپاره بېړنۍ بستې.", "longDescription": "کمپل، د تودوخې تېل، ګرمې جامې او د خوړو ټوټو وېشل په موقت سرپناهونو کې کورنیو ته.", "challenge": "سخت ژمي په موقت سرپناهونو کې کورنیو ته ګواښ پیښوي.", "approach": "د ټولنې لخوا تصدیق شوی د ژمي بستو وېش.", "results": "۶۰۰ کورنیو د ژمي بستې ترلاسه کړې.", "category": "بشردوستانه", "location": "ننګرهار، افغانستان", "status": "completed", "image": "assets/images/projects/relief-01.jpg", "beneficiaries": 3000, "progress": 1.0, "goal": "۱۲۰٬۰۰۰ ډالر", "startDate": "2023-11-01" },
+      { "id": "water-for-villages", "title": "د کلو لپاره اوبه", "description": "پاکې اوبو څاه ګانې او روغتیایي زده کړه.", "longDescription": "د ژورو څاه ګانو جوړول او د ټولنې روغتیایي زده کړه د اوبو له لارې د لېږدېدونکو ناروغیو کمولو لپاره.", "challenge": "کلي ناامنه سطحې اوبو ته تکیه کوي.", "approach": "ژور څاه + روغتیایي زده کړه + محلي ساتنې ټیمونه.", "results": "شپږ څاه ګانې کیندل شوې چې له ۲٬۰۰۰ څخه ډېرو خلکو ته خدمت کوي.", "category": "د ټولنې پرمختګ", "location": "کندز، افغانستان", "status": "upcoming", "image": "assets/images/projects/water-01.jpg", "beneficiaries": 2000, "progress": 0.0, "goal": "۹۰٬۰۰۰ ډالر", "startDate": "2025-03-01" }
+    ]
+  },
+
+  "news": {
+    "en": [
+      { "id": "new-school-opens", "title": "A new community school opens in Kabul", "summary": "Our fourth school opened this month, welcoming 300 students.", "content": "This month we opened the doors of our fourth community school in Kabul. The school welcomes 300 students, half of them girls, in a purpose-built facility with six classrooms, a library and clean water. The project was completed with local partners and community volunteers.", "image": "assets/images/news/school-01.jpg", "date": "2025-02-10", "category": "Education" },
+      { "id": "mobile-clinic-milestone", "title": "Mobile clinics reach 1,200 patients", "summary": "Our mobile health units have now treated over one thousand patients.", "content": "Since launch, our mobile clinics have provided free consultations, maternal health support and vaccinations to over 1,200 patients across four districts. Two additional units will be deployed next quarter.", "image": "assets/images/news/clinic-01.jpg", "date": "2025-01-22", "category": "Healthcare" },
+      { "id": "winter-2024-report", "title": "Winter relief 2024: a full report", "summary": "600 families received winter kits across three provinces.", "content": "Read our full report on the 2024 winter relief operation. Over 600 families received blankets, heating fuel, warm clothing and food baskets. The distribution was overseen by community committees to ensure fairness and transparency.", "image": "assets/images/news/winter-01.jpg", "date": "2024-12-18", "category": "Humanitarian" },
+      { "id": "annual-report", "title": "Annual Report 2024 published", "summary": "Our full annual report is now available for download.", "content": "The 2024 Annual Report is now available. It includes a full breakdown of our programs, financial summary, and stories from the communities we serve. Download the PDF from our Transparency page.", "image": "assets/images/news/report-01.jpg", "date": "2024-11-05", "category": "Transparency" }
+    ],
+    "ru": [
+      { "id": "new-school-opens", "title": "Открылась новая школа в Кабуле", "summary": "В этом месяце открылась наша четвёртая школа, приняв 300 учеников.", "content": "В этом месяце мы открыли двери нашей четвёртой общинной школы в Кабуле. Школа принимает 300 учеников, половина из которых девочки, в специально построенном здании с шестью классами, библиотекой и чистой водой. Проект завершён с местными партнёрами и волонтёрами.", "image": "assets/images/news/school-01.jpg", "date": "2025-02-10", "category": "Образование" },
+      { "id": "mobile-clinic-milestone", "title": "Мобильные клиники приняли 1 200 пациентов", "summary": "Наши мобильные медицинские блоки приняли более тысячи пациентов.", "content": "С момента запуска наши мобильные клиники предоставили бесплатные консультации, поддержку материнского здоровья и вакцинацию более чем 1 200 пациентам в четырёх районах. В следующем квартале будут развёрнуты два дополнительных блока.", "image": "assets/images/news/clinic-01.jpg", "date": "2025-01-22", "category": "Здравоохранение" },
+      { "id": "winter-2024-report", "title": "Зимняя помощь 2024: полный отчёт", "summary": "600 семей получили зимние наборы в трёх провинциях.", "content": "Читайте наш полный отчёт об операции зимней помощи 2024 года. Более 600 семей получили одеяла, топливо, тёплую одежду и продовольственные наборы. Распределение контролировалось общественными комитетами для справедливости и прозрачности.", "image": "assets/images/news/winter-01.jpg", "date": "2024-12-18", "category": "Гуманитарная помощь" },
+      { "id": "annual-report", "title": "Опубликован годовой отчёт за 2024 год", "summary": "Наш полный годовой отчёт доступен для скачивания.", "content": "Годовой отчёт за 2024 год теперь доступен. Он содержит полную разбивку наших программ, финансовую сводку и истории из сообществ, которым мы служим. Скачайте PDF на странице «Прозрачность».", "image": "assets/images/news/report-01.jpg", "date": "2024-11-05", "category": "Прозрачность" }
+    ],
+    "fa": [
+      { "id": "new-school-opens", "title": "یک مدرسه جامعه جدید در کابل افتتاح شد", "summary": "چهارمین مدرسه ما این ماه افتتاح شد و ۳۰۰ دانش‌آموز را پذیرفت.", "content": "این ماه درهای چهارمین مدرسه جامعه خود در کابل را گشودیم. این مدرسه ۳۰۰ دانش‌آموز، نیمی از آن‌ها دختر، را در ساختمانی هدفمند با شش کلاس، کتابخانه و آب پاک پذیرا می‌شود. این پروژه با شرکای محلی و داوطلبان جامعه به پایان رسید.", "image": "assets/images/news/school-01.jpg", "date": "2025-02-10", "category": "آموزش" },
+      { "id": "mobile-clinic-milestone", "title": "کلینیک‌های سیار به ۱٬۲۰۰ بیمار رسیدند", "summary": "واحدهای بهداشتی سیار ما اکنون بیش از هزار بیمار را درمان کرده‌اند.", "content": "از زمان راه‌اندازی، کلینیک‌های سیار ما مشاوره رایگان، حمایت از سلامت مادران و واکسیناسیون را به بیش از ۱٬۲۰۰ بیمار در چهار منطقه ارائه داده‌اند. دو واحد دیگر در سه‌ماهه بعدی مستقر خواهند شد.", "image": "assets/images/news/clinic-01.jpg", "date": "2025-01-22", "category": "بهداشت" },
+      { "id": "winter-2024-report", "title": "کمک زمستانی ۲۰۲۴: گزارش کامل", "summary": "۶۰۰ خانواده در سه ولایت بسته زمستانی دریافت کردند.", "content": "گزارش کامل ما از عملیات کمک زمستانی ۲۰۲۴ را بخوانید. بیش از ۶۰۰ خانواده پتو، سوخت گرمایشی، لباس گرم و سبد غذایی دریافت کردند. توزیع توسط کمیته‌های جامعه نظارت شد تا انصاف و شفافیت تضمین شود.", "image": "assets/images/news/winter-01.jpg", "date": "2024-12-18", "category": "بشردوستانه" },
+      { "id": "annual-report", "title": "گزارش سالانه ۲۰۲۴ منتشر شد", "summary": "گزارش کامل سالانه ما اکنون برای دانلود در دسترس است.", "content": "گزارش سالانه ۲۰۲۴ اکنون در دسترس است. شامل تفکیک کامل برنامه‌ها، خلاصه مالی و داستان‌هایی از جوامعی است که به آن‌ها خدمت می‌کنیم. PDF را از صفحه شفافیت دانلود کنید.", "image": "assets/images/news/report-01.jpg", "date": "2024-11-05", "category": "شفافیت" }
+    ],
+    "ps": [
+      { "id": "new-school-opens", "title": "په کابل کې یو نوی ټولنیز ښوونځی پرانیستل شو", "summary": "زموږ څلورم ښوونځی دا میاشت پرانیستل شو او ۳۰۰ زده کوونکي یې ومنل.", "content": "دا میاشت مو په کابل کې د خپل څلورم ټولنیز ښوونځي دروازې پرانیستې. ښوونځی ۳۰۰ زده کوونکي، نیمایي یې نجونې، په ځانګړي جوړ شوي ودانۍ کې چې شپږ ټولګي، کتابتون او پاکې اوبه لري مني. پروژه د محلي شریکانو او ټولنیزو رضاکارانو سره بشپړه شوه.", "image": "assets/images/news/school-01.jpg", "date": "2025-02-10", "category": "زده کړه" },
+      { "id": "mobile-clinic-milestone", "title": "سیار کلینیکونه ۱٬۲۰۰ ناروغانو ته ورسېدل", "summary": "زموږ سیار روغتیایي واحدونو اوس له زر څخه ډېر ناروغان درملنه کړې.", "content": "له پیل راهیسې، زموږ سیار کلینیکونو په څلورو ولسوالیو کې له ۱٬۲۰۰ څخه ډېرو ناروغانو ته وړیا مشورې، د میندو روغتیا ملاتړ او واکسین برابر کړي. دوه نور واحدونه به په راتلونکي ربع کې ځای پرځای شي.", "image": "assets/images/news/clinic-01.jpg", "date": "2025-01-22", "category": "روغتیا" },
+      { "id": "winter-2024-report", "title": "ژمي مرسته ۲۰۲۴: بشپړ راپور", "summary": "۶۰۰ کورنیو په درېو ولایتونو کې ژمي بستې ترلاسه کړې.", "content": "زموږ د ۲۰۲۴ ژمي مرستې عملیاتو بشپړ راپور ولولئ. له ۶۰۰ څخه ډېرو کورنیو کمپل، د تودوخې تېل، ګرمې جامې او د خوړو ټوټې ترلاسه کړې. وېش د ټولنیزو کمیټو لخوا نظارت شو ترڅو انصاف او روڼتیا تضمین شي.", "image": "assets/images/news/winter-01.jpg", "date": "2024-12-18", "category": "بشردوستانه" },
+      { "id": "annual-report", "title": "د ۲۰۲۴ کلنی راپور خپور شو", "summary": "زموږ بشپړ کلنی راپور اوس د ډاونلوډ لپاره شتون لري.", "content": "د ۲۰۲۴ کلنی راپور اوس شتون لري. دا زموږ د پروګرامونو بشپړ تفکیک، مالي لنډیز او د هغو ټولنو کیسې لري چې موږ ورته خدمت کوو. PDF د روڼتیا پاڼې څخه ډاونلوډ کړئ.", "image": "assets/images/news/report-01.jpg", "date": "2024-11-05", "category": "روڼتیا" }
+    ]
+  },
+
+  "team": {
+    "en": [
+      { "id": "t1", "name": "Amina Rahimi", "position": "Executive Director", "biography": "Two decades of experience in humanitarian programs across Central Asia.", "photo": "assets/images/team/amina.jpg", "group": "leadership" },
+      { "id": "t2", "name": "Daniel Osei", "position": "Director of Programs", "biography": "Leads our field programs with a focus on measurable outcomes.", "photo": "assets/images/team/daniel.jpg", "group": "leadership" },
+      { "id": "t3", "name": "Leyla Karimova", "position": "Finance Director", "biography": "Responsible for financial transparency and reporting.", "photo": "assets/images/team/leyla.jpg", "group": "leadership" },
+      { "id": "t4", "name": "Sara Ahmadi", "position": "Education Program Lead", "biography": "Coordinates school construction and teacher training.", "photo": "assets/images/team/sara.jpg", "group": "staff" },
+      { "id": "t5", "name": "Rustam Nazarov", "position": "Health Program Lead", "biography": "Manages mobile clinics and public health partnerships.", "photo": "assets/images/team/rustam.jpg", "group": "staff" },
+      { "id": "t6", "name": "Dr. Miriam Haddad", "position": "Advisor, Public Health", "biography": "Advises on maternal and child health strategy.", "photo": "assets/images/team/miriam.jpg", "group": "advisors" }
+    ],
+    "ru": [
+      { "id": "t1", "name": "Амина Рахими", "position": "Исполнительный директор", "biography": "Двадцать лет опыта в гуманитарных программах в Центральной Азии.", "photo": "assets/images/team/amina.jpg", "group": "leadership" },
+      { "id": "t2", "name": "Дэниел Осей", "position": "Директор программ", "biography": "Руководит программами на местах с фокусом на измеримые результаты.", "photo": "assets/images/team/daniel.jpg", "group": "leadership" },
+      { "id": "t3", "name": "Лейла Каримова", "position": "Финансовый директор", "biography": "Отвечает за финансовую прозрачность и отчётность.", "photo": "assets/images/team/leyla.jpg", "group": "leadership" },
+      { "id": "t4", "name": "Сара Ахмади", "position": "Руководитель образовательной программы", "biography": "Координирует строительство школ и обучение учителей.", "photo": "assets/images/team/sara.jpg", "group": "staff" },
+      { "id": "t5", "name": "Рустам Назаров", "position": "Руководитель медицинской программы", "biography": "Управляет мобильными клиниками и партнёрствами в области здравоохранения.", "photo": "assets/images/team/rustam.jpg", "group": "staff" },
+      { "id": "t6", "name": "Д-р Мириам Хаддад", "position": "Советник по общественному здоровью", "biography": "Консультирует по стратегии охраны здоровья матерей и детей.", "photo": "assets/images/team/miriam.jpg", "group": "advisors" }
+    ],
+    "fa": [
+      { "id": "t1", "name": "امینا رحیمی", "position": "مدیر اجرایی", "biography": "دو دهه تجربه در برنامه‌های بشردوستانه در آسیای مرکزی.", "photo": "assets/images/team/amina.jpg", "group": "leadership" },
+      { "id": "t2", "name": "دانیل اوسی", "position": "مدیر برنامه‌ها", "biography": "برنامه‌های میدانی ما را با تمرکز بر نتایج قابل اندازه‌گیری رهبری می‌کند.", "photo": "assets/images/team/daniel.jpg", "group": "leadership" },
+      { "id": "t3", "name": "لیلا کریموا", "position": "مدیر مالی", "biography": "مسئول شفافیت مالی و گزارش‌دهی.", "photo": "assets/images/team/leyla.jpg", "group": "leadership" },
+      { "id": "t4", "name": "سارا احمدی", "position": "مسئول برنامه آموزش", "biography": "ساخت مدارس و آموزش معلمان را هماهنگ می‌کند.", "photo": "assets/images/team/sara.jpg", "group": "staff" },
+      { "id": "t5", "name": "رستم نظروف", "position": "مسئول برنامه بهداشت", "biography": "کلینیک‌های سیار و مشارکت‌های بهداشت عمومی را مدیریت می‌کند.", "photo": "assets/images/team/rustam.jpg", "group": "staff" },
+      { "id": "t6", "name": "دکتر میریم حداد", "position": "مشاور بهداشت عمومی", "biography": "در استراتژی سلامت مادر و کودک مشاوره می‌دهد.", "photo": "assets/images/team/miriam.jpg", "group": "advisors" }
+    ],
+    "ps": [
+      { "id": "t1", "name": "امینا رحیمي", "position": "اجرایي رییس", "biography": "په منځنۍ آسیا کې د بشردوستانه پروګرامونو دوه لسیزې تجربه.", "photo": "assets/images/team/amina.jpg", "group": "leadership" },
+      { "id": "t2", "name": "ډانیل اوسی", "position": "د پروګرامونو رییس", "biography": "زموږ د سیمې پروګرامونه د اندازې وړ پایلو په تمرکز رهبري کوي.", "photo": "assets/images/team/daniel.jpg", "group": "leadership" },
+      { "id": "t3", "name": "لیلا کریموا", "position": "مالي رییس", "biography": "د مالي روڼتیا او راپور ورکولو مسؤل.", "photo": "assets/images/team/leyla.jpg", "group": "leadership" },
+      { "id": "t4", "name": "سارا احمدي", "position": "د زده‌کړې پروګرام مشره", "biography": "د ښوونځیو جوړول او د ښوونکو روزنه همغږي کوي.", "photo": "assets/images/team/sara.jpg", "group": "staff" },
+      { "id": "t5", "name": "رستم نظروف", "position": "د روغتیا پروګرام مشر", "biography": "سیار کلینیکونه او د عامې روغتیا ملګرتیاوې مدیریت کوي.", "photo": "assets/images/team/rustam.jpg", "group": "staff" },
+      { "id": "t6", "name": "ډاکټر میریام حداد", "position": "د عامې روغتیا سلاکار", "biography": "د میندو او ماشومانو د روغتیا ستراتیژۍ په اړه سلا ورکوي.", "photo": "assets/images/team/miriam.jpg", "group": "advisors" }
+    ]
+  },
+
+  "reports": {
+    "en": [
+      { "title": "Annual Report 2024", "file": "assets/reports/annual-2024.pdf", "size": "2.4 MB" },
+      { "title": "Financial Statement 2024", "file": "assets/reports/financial-2024.pdf", "size": "1.1 MB" },
+      { "title": "Annual Report 2023", "file": "assets/reports/annual-2023.pdf", "size": "2.2 MB" }
+    ],
+    "ru": [
+      { "title": "Годовой отчёт 2024", "file": "assets/reports/annual-2024.pdf", "size": "2,4 МБ" },
+      { "title": "Финансовый отчёт 2024", "file": "assets/reports/financial-2024.pdf", "size": "1,1 МБ" },
+      { "title": "Годовой отчёт 2023", "file": "assets/reports/annual-2023.pdf", "size": "2,2 МБ" }
+    ],
+    "fa": [
+      { "title": "گزارش سالانه ۲۰۲۴", "file": "assets/reports/annual-2024.pdf", "size": "۲٫۴ مگابایت" },
+      { "title": "صورت مالی ۲۰۲۴", "file": "assets/reports/financial-2024.pdf", "size": "۱٫۱ مگابایت" },
+      { "title": "گزارش سالانه ۲۰۲۳", "file": "assets/reports/annual-2023.pdf", "size": "۲٫۲ مگابایت" }
+    ],
+    "ps": [
+      { "title": "کلنی راپور ۲۰۲۴", "file": "assets/reports/annual-2024.pdf", "size": "۲٫۴ MB" },
+      { "title": "مالي صورت ۲۰۲۴", "file": "assets/reports/financial-2024.pdf", "size": "۱٫۱ MB" },
+      { "title": "کلنی راپور ۲۰۲۳", "file": "assets/reports/annual-2023.pdf", "size": "۲٫۲ MB" }
+    ]
+  }
+}
