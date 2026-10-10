@@ -899,6 +899,168 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Thank you for contacting us. Online submission will be available soon.'**
   String get contactFormSuccess;
+
+  /// No description provided for @projectsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No projects match your search or filter.'**
+  String get projectsEmpty;
+
+  /// No description provided for @newsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No news has been published yet.'**
+  String get newsEmpty;
+
+  /// No description provided for @projectNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'This project could not be found.'**
+  String get projectNotFound;
+
+  /// No description provided for @articleNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'This article could not be found.'**
+  String get articleNotFound;
+
+  /// No description provided for @projectOverview.
+  ///
+  /// In en, this message translates to:
+  /// **'Overview'**
+  String get projectOverview;
+
+  /// No description provided for @projectChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'The challenge'**
+  String get projectChallenge;
+
+  /// No description provided for @projectApproach.
+  ///
+  /// In en, this message translates to:
+  /// **'Our approach'**
+  String get projectApproach;
+
+  /// No description provided for @projectResults.
+  ///
+  /// In en, this message translates to:
+  /// **'Results'**
+  String get projectResults;
+
+  /// No description provided for @formRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required.'**
+  String get formRequired;
+
+  /// No description provided for @formInvalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email address.'**
+  String get formInvalidEmail;
+
+  /// No description provided for @transparencyFinancialText.
+  ///
+  /// In en, this message translates to:
+  /// **'87% of funds go directly to programs, 8% to operations and 5% to fundraising. Full details are available in the annual reports below.'**
+  String get transparencyFinancialText;
+
+  /// No description provided for @transparencyGovernanceText.
+  ///
+  /// In en, this message translates to:
+  /// **'Registered as a non-profit organization. Governance is provided by an independent board. Policies are available on request.'**
+  String get transparencyGovernanceText;
+
+  /// No description provided for @reportUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'This report will be available for download soon.'**
+  String get reportUnavailable;
+
+  /// No description provided for @donateWhyText.
+  ///
+  /// In en, this message translates to:
+  /// **'Your gift provides education, healthcare and emergency relief to families who need it most.'**
+  String get donateWhyText;
+
+  /// No description provided for @donateWhereText.
+  ///
+  /// In en, this message translates to:
+  /// **'87% of every donation goes directly to programs. 8% covers operations and 5% fundraising.'**
+  String get donateWhereText;
+
+  /// No description provided for @donateOptionsText.
+  ///
+  /// In en, this message translates to:
+  /// **'One-time gifts · Monthly giving · In-kind donations · Corporate matching'**
+  String get donateOptionsText;
+
+  /// No description provided for @donateBankLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank'**
+  String get donateBankLabel;
+
+  /// No description provided for @donateAccountLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Account name'**
+  String get donateAccountLabel;
+
+  /// No description provided for @donateReferenceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Reference'**
+  String get donateReferenceLabel;
+
+  /// No description provided for @donateReferenceValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Donation'**
+  String get donateReferenceValue;
+
+  /// No description provided for @donateFaq1Q.
+  ///
+  /// In en, this message translates to:
+  /// **'Is my donation tax-deductible?'**
+  String get donateFaq1Q;
+
+  /// No description provided for @donateFaq1A.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, in jurisdictions where the foundation is registered. Contact us for details.'**
+  String get donateFaq1A;
+
+  /// No description provided for @donateFaq2Q.
+  ///
+  /// In en, this message translates to:
+  /// **'Can I cancel a monthly gift?'**
+  String get donateFaq2Q;
+
+  /// No description provided for @donateFaq2A.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, at any time. Just contact our office.'**
+  String get donateFaq2A;
+
+  /// No description provided for @donateFaq3Q.
+  ///
+  /// In en, this message translates to:
+  /// **'How do I know my donation is used well?'**
+  String get donateFaq3Q;
+
+  /// No description provided for @donateFaq3A.
+  ///
+  /// In en, this message translates to:
+  /// **'See our Transparency page for full financial reports.'**
+  String get donateFaq3A;
+
+  /// No description provided for @contactHoursValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Mon–Fri, 9:00–17:00'**
+  String get contactHoursValue;
 }
 
 class _AppLocalizationsDelegate

@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appName => 'Блоговорительная и развивающая организация Тавана';
+  String get appName => 'Благотворительная и развивающая организация Тавана';
 
   @override
   String get navHome => 'Главная';
@@ -417,4 +417,97 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get contactFormSuccess =>
       'Спасибо за обращение. Онлайн-отправка появится в ближайшее время.';
+
+  @override
+  String get projectsEmpty =>
+      'Нет проектов, соответствующих поиску или фильтру.';
+
+  @override
+  String get newsEmpty => 'Новостей пока нет.';
+
+  @override
+  String get projectNotFound => 'Проект не найден.';
+
+  @override
+  String get articleNotFound => 'Статья не найдена.';
+
+  @override
+  String get projectOverview => 'Обзор';
+
+  @override
+  String get projectChallenge => 'Проблема';
+
+  @override
+  String get projectApproach => 'Наш подход';
+
+  @override
+  String get projectResults => 'Результаты';
+
+  @override
+  String get formRequired => 'Это поле обязательно.';
+
+  @override
+  String get formInvalidEmail => 'Введите корректный адрес эл. почты.';
+
+  @override
+  String get transparencyFinancialText =>
+      '87% средств направляются непосредственно на программы, 8% — на операционные расходы и 5% — на сбор средств. Подробности — в годовых отчётах ниже.';
+
+  @override
+  String get transparencyGovernanceText =>
+      'Зарегистрирована как некоммерческая организация. Управление осуществляет независимый совет. Внутренние положения предоставляются по запросу.';
+
+  @override
+  String get reportUnavailable =>
+      'Этот отчёт скоро будет доступен для скачивания.';
+
+  @override
+  String get donateWhyText =>
+      'Ваш вклад обеспечивает образование, медицинскую помощь и экстренную поддержку семьям, которые нуждаются в этом больше всего.';
+
+  @override
+  String get donateWhereText =>
+      '87% каждого пожертвования идёт непосредственно на программы, 8% — на операционные расходы, 5% — на сбор средств.';
+
+  @override
+  String get donateOptionsText =>
+      'Разовые пожертвования · Ежемесячная поддержка · Пожертвования в натуральной форме · Корпоративное софинансирование';
+
+  @override
+  String get donateBankLabel => 'Банк';
+
+  @override
+  String get donateAccountLabel => 'Получатель';
+
+  @override
+  String get donateReferenceLabel => 'Назначение платежа';
+
+  @override
+  String get donateReferenceValue => 'Пожертвование';
+
+  @override
+  String get donateFaq1Q =>
+      'Можно ли получить налоговый вычет за пожертвование?';
+
+  @override
+  String get donateFaq1A =>
+      'Да, в юрисдикциях, где зарегистрирован фонд. Свяжитесь с нами для уточнения.';
+
+  @override
+  String get donateFaq2Q => 'Можно ли отменить ежемесячное пожертвование?';
+
+  @override
+  String get donateFaq2A =>
+      'Да, в любое время. Просто свяжитесь с нашим офисом.';
+
+  @override
+  String get donateFaq3Q =>
+      'Как узнать, что моё пожертвование используется правильно?';
+
+  @override
+  String get donateFaq3A =>
+      'Полные финансовые отчёты — на странице «Прозрачность».';
+
+  @override
+  String get contactHoursValue => 'Пн–Пт, 9:00–17:00';
 }

@@ -6,6 +6,7 @@ import '../../core/responsive/responsive.dart';
 import '../../core/widgets/app_footer.dart';
 import '../../core/widgets/app_header.dart';
 import '../../core/widgets/responsive_container.dart';
+import '../../core/widgets/responsive_grid.dart';
 import '../../l10n/app_localizations.dart';
 
 class GetInvolvedPage extends StatelessWidget {
@@ -13,18 +14,21 @@ class GetInvolvedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final cards = [
       _Involved(l10n.involvedVolunteer, l10n.involvedVolunteerText,
-          Icons.volunteer_activism),
-      _Involved(l10n.involvedPartner, l10n.involvedPartnerText, Icons.handshake),
+          Icons.volunteer_activism, l10n.navContact, '/contact'),
+      _Involved(l10n.involvedPartner, l10n.involvedPartnerText,
+          Icons.handshake, l10n.navContact, '/contact'),
       _Involved(l10n.involvedFundraise, l10n.involvedFundraiseText,
-          Icons.campaign),
+          Icons.campaign, l10n.navContact, '/contact'),
       _Involved(l10n.involvedCorporate, l10n.involvedCorporateText,
-          Icons.business_center),
+          Icons.business_center, l10n.navContact, '/contact'),
       _Involved(l10n.involvedAmbassador, l10n.involvedAmbassadorText,
-          Icons.public),
-      _Involved(l10n.donate, l10n.homeCTA_Text, Icons.favorite),
+          Icons.public, l10n.navContact, '/contact'),
+      // The Donate card previously sent people to the contact form.
+      _Involved(l10n.donate, l10n.homeCTA_Text, Icons.favorite, l10n.donate,
+          '/donate'),
     ];
 
     return Scaffold(
@@ -54,20 +58,9 @@ class GetInvolvedPage extends StatelessWidget {
                 horizontal: context.hPad,
                 vertical: AppSpacing.section,
               ),
-              child: LayoutBuilder(builder: (context, _) {
-                final cols = context.gridCols(mobile: 1, tablet: 2, desktop: 3);
-                return GridView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: cards.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: cols,
-                    crossAxisSpacing: AppSpacing.md,
-                    mainAxisSpacing: AppSpacing.md,
-                    childAspectRatio: 1.1,
-                  ),
-                  itemBuilder: (_, i) {
-                    final c = cards[i];
+              child: ResponsiveGrid(
+                columns: context.gridCols(mobile: 1, tablet: 2, desktop: 3),
+                children: cards.map((c) {
                     return Card(
                       child: Padding(
                         padding: const EdgeInsets.all(AppSpacing.lg),
@@ -80,24 +73,23 @@ class GetInvolvedPage extends StatelessWidget {
                                 style:
                                 Theme.of(context).textTheme.titleLarge),
                             const SizedBox(height: AppSpacing.sm),
-                            Expanded(
-                              child: Text(c.text,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyMedium),
-                            ),
+                            Text(c.text,
+                                style:
+                                    Theme.of(context).textTheme.bodyMedium),
                             const SizedBox(height: AppSpacing.md),
+                            // Pushes the button to the card bottom so buttons
+                            // line up across a row.
+                            const Spacer(),
                             FilledButton(
-                              onPressed: () => context.go('/contact'),
-                              child: Text(l10n.navContact),
+                              onPressed: () => context.go(c.route),
+                              child: Text(c.action),
                             ),
                           ],
                         ),
                       ),
                     );
-                  },
-                );
-              }),
+                }).toList(),
+              ),
             ),
             const AppFooter(),
           ],
@@ -111,5 +103,7 @@ class _Involved {
   final String title;
   final String text;
   final IconData icon;
-  _Involved(this.title, this.text, this.icon);
+  final String action;
+  final String route;
+  const _Involved(this.title, this.text, this.icon, this.action, this.route);
 }

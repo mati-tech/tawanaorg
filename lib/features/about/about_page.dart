@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_spacing.dart';
-import '../../core/responsive/responsive.dart';
 import '../../core/widgets/app_footer.dart';
 import '../../core/widgets/app_header.dart';
 import '../../core/widgets/responsive_container.dart';
@@ -15,7 +14,7 @@ class AboutPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final about = ref.watch(aboutProvider);
 
     return Scaffold(
@@ -50,7 +49,7 @@ class AboutPage extends ConsumerWidget {
                     title: l10n.aboutCountriesTitle,
                     text: a['countries'] as String? ?? '',
                   ),
-                  _Timeline(items: (a['timeline'] as List).cast()),
+                  _Timeline(items: a['timeline'] as List? ?? const []),
                 ],
               ),
               loading: () => const Padding(
@@ -124,7 +123,7 @@ class _Timeline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Container(
       color: AppColors.surface,
       padding: const EdgeInsets.symmetric(vertical: AppSpacing.section),

@@ -15,12 +15,13 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
+  static final _emailPattern = RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$');
   final _formKey = GlobalKey<FormState>();
   bool _sent = false;
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: const AppHeader(),
       body: SingleChildScrollView(
@@ -83,7 +84,7 @@ class _ContactPageState extends State<ContactPage> {
         _infoRow(context, Icons.phone_outlined, l10n.contactPhone,
             '+00 000 000 000'),
         _infoRow(context, Icons.schedule_outlined, l10n.contactHours,
-            'Mon–Fri, 9:00–17:00'),
+            l10n.contactHoursValue),
         const SizedBox(height: AppSpacing.lg),
         Text(l10n.contactFollow,
             style: Theme.of(context).textTheme.titleLarge),
@@ -146,31 +147,53 @@ class _ContactPageState extends State<ContactPage> {
       key: _formKey,
       child: Column(
         children: [
+          // Validation messages were the generic "Something went wrong.";
+          // they now say what is wrong with the field.
           TextFormField(
-            decoration: InputDecoration(labelText: l10n.contactFormName),
+            decoration: InputDecoration(labelText: '${l10n.contactFormName} *'),
+            textInputAction: TextInputAction.next,
+            autofillHints: const [AutofillHints.name],
             validator: (v) =>
-            (v == null || v.isEmpty) ? l10n.error : null,
+                (v == null || v.trim().isEmpty) ? l10n.formRequired : null,
           ),
           const SizedBox(height: AppSpacing.md),
           TextFormField(
-            decoration: InputDecoration(labelText: l10n.contactFormEmail),
-            validator: (v) =>
-            (v == null || !v.contains('@')) ? l10n.error : null,
+            decoration:
+                InputDecoration(labelText: '${l10n.contactFormEmail} *'),
+            keyboardType: TextInputType.emailAddress,
+            textInputAction: TextInputAction.next,
+            autofillHints: const [AutofillHints.email],
+            validator: (v) {
+              final value = v?.trim() ?? '';
+              if (value.isEmpty) return l10n.formRequired;
+              return _emailPattern.hasMatch(value)
+                  ? null
+                  : l10n.formInvalidEmail;
+            },
           ),
           const SizedBox(height: AppSpacing.md),
           TextFormField(
             decoration: InputDecoration(labelText: l10n.contactFormPhone),
+            keyboardType: TextInputType.phone,
+            textInputAction: TextInputAction.next,
+            autofillHints: const [AutofillHints.telephoneNumber],
           ),
           const SizedBox(height: AppSpacing.md),
           TextFormField(
             decoration: InputDecoration(labelText: l10n.contactFormSubject),
+            textInputAction: TextInputAction.next,
           ),
           const SizedBox(height: AppSpacing.md),
           TextFormField(
-            maxLines: 5,
-            decoration: InputDecoration(labelText: l10n.contactFormMessage),
+            minLines: 5,
+            maxLines: 8,
+            keyboardType: TextInputType.multiline,
+            decoration: InputDecoration(
+              labelText: '${l10n.contactFormMessage} *',
+              alignLabelWithHint: true,
+            ),
             validator: (v) =>
-            (v == null || v.isEmpty) ? l10n.error : null,
+                (v == null || v.trim().isEmpty) ? l10n.formRequired : null,
           ),
           const SizedBox(height: AppSpacing.lg),
           Align(

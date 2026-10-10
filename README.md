@@ -9,8 +9,8 @@ Static multilingual Flutter Web site for an international charity foundation.
 - Pashto (ps, RTL)
 
 ## Requirements
-- Flutter 3.22+
-- Dart 3.4+
+- Flutter 3.35+
+- Dart 3.9+ (see `environment.sdk` in pubspec.yaml)
 
 ## Setup
 ```bash

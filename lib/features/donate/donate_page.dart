@@ -11,9 +11,13 @@ import '../../l10n/app_localizations.dart';
 class DonatePage extends StatelessWidget {
   const DonatePage({super.key});
 
+  static const _bankName = 'Example Bank';
+  static const _iban = 'XX00 0000 0000 0000 0000';
+  static const _swift = 'XXXX XXXX';
+
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: const AppHeader(),
       body: SingleChildScrollView(
@@ -44,14 +48,20 @@ class DonatePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _block(context, l10n.donateWhy,
-                      'Your gift provides education, healthcare and emergency relief to families who need it most.'),
-                  _block(context, l10n.donateWhere,
-                      '87% of every donation goes directly to programs. 8% covers operations, 5% fundraising.'),
-                  _block(context, l10n.donateOptions,
-                      'One-time gifts · Monthly giving · In-kind donations · Corporate matching.'),
-                  _block(context, l10n.donateBank,
-                      'Bank: Example Bank\nAccount: Hope Foundation\nIBAN: XX00 0000 0000 0000 0000\nSWIFT: XXXX XXXX\nReference: Donation'),
+                  _block(context, l10n.donateWhy, l10n.donateWhyText),
+                  _block(context, l10n.donateWhere, l10n.donateWhereText),
+                  _block(context, l10n.donateOptions, l10n.donateOptionsText),
+                  _block(
+                    context,
+                    l10n.donateBank,
+                    // TODO(product): placeholder bank details — replace with
+                    // the foundation's real account before launch.
+                    '${l10n.donateBankLabel}: $_bankName\n'
+                    '${l10n.donateAccountLabel}: ${l10n.appName}\n'
+                    'IBAN: $_iban\n'
+                    'SWIFT: $_swift\n'
+                    '${l10n.donateReferenceLabel}: ${l10n.donateReferenceValue}',
+                  ),
                   const SizedBox(height: AppSpacing.lg),
                   Container(
                     padding: const EdgeInsets.all(AppSpacing.lg),
@@ -75,12 +85,9 @@ class DonatePage extends StatelessWidget {
                   ),
                   const SizedBox(height: AppSpacing.section),
                   SectionHeader(title: l10n.donateFAQ),
-                  _faq(context, 'Is my donation tax-deductible?',
-                      'Yes, in jurisdictions where the foundation is registered. Contact us for details.'),
-                  _faq(context, 'Can I cancel a monthly gift?',
-                      'Yes, at any time. Just contact our office.'),
-                  _faq(context, 'How do I know my donation is used well?',
-                      'See our Transparency page for full financial reports.'),
+                  _faq(context, l10n.donateFaq1Q, l10n.donateFaq1A),
+                  _faq(context, l10n.donateFaq2Q, l10n.donateFaq2A),
+                  _faq(context, l10n.donateFaq3Q, l10n.donateFaq3A),
                 ],
               ),
             ),
@@ -106,7 +113,9 @@ class DonatePage extends StatelessWidget {
   }
 
   Widget _faq(BuildContext context, String q, String a) {
-    return Card(
+    return Padding(
+      padding: const EdgeInsets.only(bottom: AppSpacing.sm),
+      child: Card(
       child: ListTile(
         title: Text(q),
         subtitle: Padding(
@@ -114,6 +123,7 @@ class DonatePage extends StatelessWidget {
           child: Text(a),
         ),
       ),
+    ),
     );
   }
 }

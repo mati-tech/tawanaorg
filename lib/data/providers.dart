@@ -27,39 +27,24 @@ Provider<String>((ref) => ref.watch(localeProvider).languageCode);
 
 final projectsProvider = FutureProvider<List<Project>>((ref) async {
   final lang = ref.watch(currentLangProvider);
-  final repo = ref.read(contentRepositoryProvider);
-  final data = await repo.load();
-  final section = (data['projects'] as Map).cast<String, dynamic>();
-  final list = (section[lang] ?? section['en']) as List;
-  return list.map((e) => Project.fromJson((e as Map).cast())).toList();
+  return ref.read(projectRepositoryProvider).getProjects(lang);
 });
 
-final projectProvider = FutureProvider.family<Project?, String>((ref, id) async {
-  final all = await ref.watch(projectsProvider.future);
-  try {
-    return all.firstWhere((p) => p.id == id);
-  } catch (_) {
-    return null;
-  }
+final projectProvider =
+    FutureProvider.family<Project?, String>((ref, id) async {
+  final lang = ref.watch(currentLangProvider);
+  return ref.read(projectRepositoryProvider).getById(id, lang);
 });
 
 final newsProvider = FutureProvider<List<NewsArticle>>((ref) async {
   final lang = ref.watch(currentLangProvider);
-  final repo = ref.read(contentRepositoryProvider);
-  final data = await repo.load();
-  final section = (data['news'] as Map).cast<String, dynamic>();
-  final list = (section[lang] ?? section['en']) as List;
-  return list.map((e) => NewsArticle.fromJson((e as Map).cast())).toList();
+  return ref.read(newsRepositoryProvider).getNews(lang);
 });
 
 final newsArticleProvider =
-FutureProvider.family<NewsArticle?, String>((ref, id) async {
-  final all = await ref.watch(newsProvider.future);
-  try {
-    return all.firstWhere((n) => n.id == id);
-  } catch (_) {
-    return null;
-  }
+    FutureProvider.family<NewsArticle?, String>((ref, id) async {
+  final lang = ref.watch(currentLangProvider);
+  return ref.read(newsRepositoryProvider).getById(id, lang);
 });
 
 final teamProvider = FutureProvider<List<TeamMember>>((ref) async {

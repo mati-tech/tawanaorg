@@ -6,6 +6,8 @@ import '../../l10n/app_localizations.dart';
 import '../../models/news.dart';
 import '../../models/project.dart';
 import '../../models/team_member.dart';
+import '../responsive/responsive.dart';
+import '../utils/formatters.dart';
 import 'app_image.dart';
 import 'status_badge.dart';
 
@@ -15,7 +17,7 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -105,7 +107,7 @@ class NewsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -123,7 +125,7 @@ class NewsCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${article.category} · ${_fmt(article.date)}',
+                    '${article.category} · ${context.formatDate(article.date)}',
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                   const SizedBox(height: AppSpacing.sm),
@@ -156,9 +158,6 @@ class NewsCard extends StatelessWidget {
       ),
     );
   }
-
-  String _fmt(DateTime d) =>
-      '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
 }
 
 class TeamCard extends StatelessWidget {
@@ -177,7 +176,11 @@ class TeamCard extends StatelessWidget {
               child: SizedBox(
                 width: 96,
                 height: 96,
-                child: AppImage(path: member.photo, radius: BorderRadius.zero),
+                child: AppImage(
+                  path: member.photo,
+                  radius: BorderRadius.zero,
+                  semanticLabel: member.name,
+                ),
               ),
             ),
             const SizedBox(height: AppSpacing.md),
@@ -209,16 +212,25 @@ class StatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(AppSpacing.lg),
+        // Desktop keeps the original lg padding; phones use md so two
+        // stat cards fit side by side down to 280 px.
+        padding: EdgeInsets.all(context.isMobile ? AppSpacing.md : AppSpacing.lg),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              value,
-              style: const TextStyle(
-                fontSize: 34,
-                fontWeight: FontWeight.w800,
-                color: AppColors.primary,
+            // Large figures ("5,000+") shrink to fit narrow 2-column cells.
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: AlignmentDirectional.centerStart,
+              child: Text(
+                value,
+                maxLines: 1,
+                style: const TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.primary,
+                ),
               ),
             ),
             const SizedBox(height: AppSpacing.xs),

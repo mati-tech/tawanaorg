@@ -7,6 +7,7 @@ import '../../core/widgets/app_footer.dart';
 import '../../core/widgets/app_header.dart';
 import '../../core/widgets/cards.dart';
 import '../../core/widgets/responsive_container.dart';
+import '../../core/widgets/responsive_grid.dart';
 import '../../data/providers.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -23,7 +24,7 @@ class _ProjectsPageState extends ConsumerState<ProjectsPage> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final projects = ref.watch(projectsProvider);
 
     return Scaffold(
@@ -56,15 +57,20 @@ class _ProjectsPageState extends ConsumerState<ProjectsPage> {
               child: Column(
                 children: [
                   TextField(
-                    onChanged: (v) => setState(() => _query = v.toLowerCase()),
+                    onChanged: (v) =>
+                        setState(() => _query = v.trim().toLowerCase()),
+                    textInputAction: TextInputAction.search,
                     decoration: InputDecoration(
-                      hintText: l10n.searchPlaceholder,
+                      // labelText (not only a hint) so screen readers
+                      // announce the field's purpose.
+                      labelText: l10n.searchPlaceholder,
                       prefixIcon: const Icon(Icons.search),
                     ),
                   ),
                   const SizedBox(height: AppSpacing.md),
                   Wrap(
                     spacing: 8,
+                    runSpacing: 8,
                     children: [
                       _filterChip(l10n.filterAll, 'all'),
                       _filterChip(l10n.statusActive, 'active'),
@@ -87,27 +93,35 @@ class _ProjectsPageState extends ConsumerState<ProjectsPage> {
                         _status == 'all' || p.status == _status;
                     final matchesQuery = _query.isEmpty ||
                         p.title.toLowerCase().contains(_query) ||
-                        p.description.toLowerCase().contains(_query);
+                        p.description.toLowerCase().contains(_query) ||
+                        p.category.toLowerCase().contains(_query) ||
+                        p.location.toLowerCase().contains(_query);
                     return matchesStatus && matchesQuery;
                   }).toList();
                   if (filtered.isEmpty) {
+                    // Friendly empty state (previously showed the generic
+                    // "Something went wrong." error text).
                     return Padding(
                       padding: const EdgeInsets.all(AppSpacing.xxl),
-                      child: Center(child: Text(l10n.error)),
+                      child: Column(
+                        children: [
+                          const Icon(Icons.search_off,
+                              size: 48, color: AppColors.textSecondary),
+                          const SizedBox(height: AppSpacing.md),
+                          Text(
+                            l10n.projectsEmpty,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.bodyLarge,
+                          ),
+                        ],
+                      ),
                     );
                   }
-                  final cols = context.gridCols(mobile: 1, tablet: 2, desktop: 3);
-                  return GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: filtered.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: cols,
-                      crossAxisSpacing: AppSpacing.md,
-                      mainAxisSpacing: AppSpacing.md,
-                      childAspectRatio: 0.72,
-                    ),
-                    itemBuilder: (_, i) => ProjectCard(project: filtered[i]),
+                  return ResponsiveGrid(
+                    columns: context.gridCols(mobile: 1, tablet: 2, desktop: 3),
+                    children: filtered
+                        .map((p) => ProjectCard(project: p))
+                        .toList(),
                   );
                 },
                 loading: () => const Center(

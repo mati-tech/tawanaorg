@@ -7,6 +7,7 @@ import '../../core/widgets/app_footer.dart';
 import '../../core/widgets/app_header.dart';
 import '../../core/widgets/cards.dart';
 import '../../core/widgets/responsive_container.dart';
+import '../../core/widgets/responsive_grid.dart';
 import '../../core/widgets/section_header.dart';
 import '../../data/providers.dart';
 import '../../l10n/app_localizations.dart';
@@ -16,7 +17,7 @@ class TeamPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final team = ref.watch(teamProvider);
 
     return Scaffold(
@@ -59,25 +60,16 @@ class TeamPage extends ConsumerWidget {
                       final members =
                       list.where((m) => m.group == entry.key).toList();
                       if (members.isEmpty) return const SizedBox.shrink();
-                      final cols =
-                      context.gridCols(mobile: 1, tablet: 2, desktop: 3);
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SectionHeader(title: entry.value),
-                          GridView.builder(
-                            shrinkWrap: true,
-                            physics: const NeverScrollableScrollPhysics(),
-                            itemCount: members.length,
-                            gridDelegate:
-                            SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: cols,
-                              crossAxisSpacing: AppSpacing.md,
-                              mainAxisSpacing: AppSpacing.md,
-                              childAspectRatio: 0.95,
-                            ),
-                            itemBuilder: (_, i) =>
-                                TeamCard(member: members[i]),
+                          ResponsiveGrid(
+                            columns: context.gridCols(
+                                mobile: 1, tablet: 2, desktop: 3),
+                            children: members
+                                .map((m) => TeamCard(member: m))
+                                .toList(),
                           ),
                           const SizedBox(height: AppSpacing.xl),
                         ],

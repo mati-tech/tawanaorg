@@ -418,4 +418,93 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get contactFormSuccess =>
       'Thank you for contacting us. Online submission will be available soon.';
+
+  @override
+  String get projectsEmpty => 'No projects match your search or filter.';
+
+  @override
+  String get newsEmpty => 'No news has been published yet.';
+
+  @override
+  String get projectNotFound => 'This project could not be found.';
+
+  @override
+  String get articleNotFound => 'This article could not be found.';
+
+  @override
+  String get projectOverview => 'Overview';
+
+  @override
+  String get projectChallenge => 'The challenge';
+
+  @override
+  String get projectApproach => 'Our approach';
+
+  @override
+  String get projectResults => 'Results';
+
+  @override
+  String get formRequired => 'This field is required.';
+
+  @override
+  String get formInvalidEmail => 'Please enter a valid email address.';
+
+  @override
+  String get transparencyFinancialText =>
+      '87% of funds go directly to programs, 8% to operations and 5% to fundraising. Full details are available in the annual reports below.';
+
+  @override
+  String get transparencyGovernanceText =>
+      'Registered as a non-profit organization. Governance is provided by an independent board. Policies are available on request.';
+
+  @override
+  String get reportUnavailable =>
+      'This report will be available for download soon.';
+
+  @override
+  String get donateWhyText =>
+      'Your gift provides education, healthcare and emergency relief to families who need it most.';
+
+  @override
+  String get donateWhereText =>
+      '87% of every donation goes directly to programs. 8% covers operations and 5% fundraising.';
+
+  @override
+  String get donateOptionsText =>
+      'One-time gifts · Monthly giving · In-kind donations · Corporate matching';
+
+  @override
+  String get donateBankLabel => 'Bank';
+
+  @override
+  String get donateAccountLabel => 'Account name';
+
+  @override
+  String get donateReferenceLabel => 'Reference';
+
+  @override
+  String get donateReferenceValue => 'Donation';
+
+  @override
+  String get donateFaq1Q => 'Is my donation tax-deductible?';
+
+  @override
+  String get donateFaq1A =>
+      'Yes, in jurisdictions where the foundation is registered. Contact us for details.';
+
+  @override
+  String get donateFaq2Q => 'Can I cancel a monthly gift?';
+
+  @override
+  String get donateFaq2A => 'Yes, at any time. Just contact our office.';
+
+  @override
+  String get donateFaq3Q => 'How do I know my donation is used well?';
+
+  @override
+  String get donateFaq3A =>
+      'See our Transparency page for full financial reports.';
+
+  @override
+  String get contactHoursValue => 'Mon–Fri, 9:00–17:00';
 }

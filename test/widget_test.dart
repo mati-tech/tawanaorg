@@ -1,30 +1,62 @@
-// This is a basic Flutter widget test.
+// Smoke tests for the Tawana Foundation website.
 //
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+// The previous file was the default counter template: it imported
+// `package:tawanaweb/main.dart` and `MyApp`, neither of which exists in this
+// package (`tawanafoundation`), so `flutter analyze` / `flutter test` failed.
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:tawanaweb/main.dart';
+import 'package:tawanafoundation/app/app.dart';
+import 'package:tawanafoundation/core/widgets/responsive_grid.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  group('LocaleNotifier', () {
+    test('restores a supported saved language', () {
+      expect(LocaleNotifier('ps').state, const Locale('ps'));
+    });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    test('falls back to English for missing or unsupported codes', () {
+      expect(LocaleNotifier(null).state, const Locale('en'));
+      expect(LocaleNotifier('de').state, const Locale('en'));
+    });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    test('persists the selected language', () async {
+      SharedPreferences.setMockInitialValues({});
+      final notifier = LocaleNotifier(null);
+      await notifier.set(const Locale('fa'));
+      final prefs = await SharedPreferences.getInstance();
+      expect(notifier.state, const Locale('fa'));
+      expect(prefs.getString(LocaleNotifier.prefsKey), 'fa');
+    });
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('ResponsiveGrid sizes rows to content without overflow at 280 px',
+      (tester) async {
+    tester.view.physicalSize = const Size(280, 653);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: SingleChildScrollView(
+            child: ResponsiveGrid(
+              columns: 2,
+              children: List.generate(
+                5,
+                (i) => Card(
+                  child: Text('Card $i ' * (i + 1) * 4),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    expect(tester.takeException(), isNull);
+    expect(find.byType(Card), findsNWidgets(5));
   });
 }

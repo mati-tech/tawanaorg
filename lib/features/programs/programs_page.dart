@@ -6,7 +6,7 @@ import '../../core/responsive/responsive.dart';
 import '../../core/widgets/app_footer.dart';
 import '../../core/widgets/app_header.dart';
 import '../../core/widgets/responsive_container.dart';
-import '../../core/widgets/section_header.dart';
+import '../../core/widgets/responsive_grid.dart';
 import '../../data/providers.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -15,7 +15,7 @@ class ProgramsPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final programs = ref.watch(programsProvider);
 
     return Scaffold(
@@ -47,19 +47,9 @@ class ProgramsPage extends ConsumerWidget {
               ),
               child: programs.when(
                 data: (list) {
-                  final cols = context.gridCols(mobile: 1, tablet: 2, desktop: 3);
-                  return GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: list.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: cols,
-                      crossAxisSpacing: AppSpacing.md,
-                      mainAxisSpacing: AppSpacing.md,
-                      childAspectRatio: 1.15,
-                    ),
-                    itemBuilder: (_, i) {
-                      final p = list[i];
+                  return ResponsiveGrid(
+                    columns: context.gridCols(mobile: 1, tablet: 2, desktop: 3),
+                    children: list.map((p) {
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(AppSpacing.lg),
@@ -87,7 +77,7 @@ class ProgramsPage extends ConsumerWidget {
                           ),
                         ),
                       );
-                    },
+                    }).toList(),
                   );
                 },
                 loading: () => const Center(

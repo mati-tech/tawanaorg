@@ -7,6 +7,7 @@ import '../../core/widgets/app_footer.dart';
 import '../../core/widgets/app_header.dart';
 import '../../core/widgets/cards.dart';
 import '../../core/widgets/responsive_container.dart';
+import '../../core/widgets/responsive_grid.dart';
 import '../../core/widgets/section_header.dart';
 import '../../data/providers.dart';
 import '../../l10n/app_localizations.dart';
@@ -16,7 +17,7 @@ class ImpactPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final stats = ref.watch(impactStatsProvider);
     final stories = ref.watch(impactStoriesProvider);
 
@@ -52,15 +53,9 @@ class ImpactPage extends ConsumerWidget {
                 children: [
                   stats.when(
                     data: (list) {
-                      final cols = context.gridCols(
-                          mobile: 2, tablet: 3, desktop: 5);
-                      return GridView.count(
-                        crossAxisCount: cols,
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        crossAxisSpacing: AppSpacing.md,
-                        mainAxisSpacing: AppSpacing.md,
-                        childAspectRatio: 1.6,
+                      return ResponsiveGrid(
+                        columns: context.gridCols(
+                            mobile: 2, tablet: 3, desktop: 5),
                         children: list
                             .map((s) =>
                             StatCard(value: s.value, label: s.label))
@@ -74,21 +69,10 @@ class ImpactPage extends ConsumerWidget {
                   SectionHeader(title: l10n.impactStories),
                   stories.when(
                     data: (list) {
-                      final cols = context.gridCols(
-                          mobile: 1, tablet: 2, desktop: 2);
-                      return GridView.builder(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: list.length,
-                        gridDelegate:
-                        SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: cols,
-                          crossAxisSpacing: AppSpacing.md,
-                          mainAxisSpacing: AppSpacing.md,
-                          childAspectRatio: 2.6,
-                        ),
-                        itemBuilder: (_, i) {
-                          final s = list[i];
+                      return ResponsiveGrid(
+                        columns: context.gridCols(
+                            mobile: 1, tablet: 2, desktop: 2),
+                        children: list.map((s) {
                           return Card(
                             child: Padding(
                               padding: const EdgeInsets.all(AppSpacing.lg),
@@ -100,21 +84,19 @@ class ImpactPage extends ConsumerWidget {
                                           .textTheme
                                           .titleLarge),
                                   const SizedBox(height: AppSpacing.sm),
-                                  Expanded(
-                                    child: Text(
-                                      s.text,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium,
-                                      overflow: TextOverflow.ellipsis,
-                                      maxLines: 4,
-                                    ),
+                                  // Full story text: it was previously cut
+                                  // to 4 lines with no way to read the rest.
+                                  Text(
+                                    s.text,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium,
                                   ),
                                 ],
                               ),
                             ),
                           );
-                        },
+                        }).toList(),
                       );
                     },
                     loading: () => const SizedBox.shrink(),

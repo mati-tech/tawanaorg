@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_spacing.dart';
 import '../../l10n/app_localizations.dart';
 import '../responsive/responsive.dart';
@@ -11,7 +10,7 @@ class AppFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final isMobile = context.isMobile;
 
     final columns = <_FooterColumn>[
@@ -67,23 +66,33 @@ class AppFooter extends StatelessWidget {
             const SizedBox(height: AppSpacing.xl),
             const Divider(color: Colors.white24),
             const SizedBox(height: AppSpacing.md),
-            Row(
+            // Wrap so the legal links drop below the copyright line on
+            // phones instead of squeezing it into a narrow column.
+            Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              alignment: WrapAlignment.spaceBetween,
+              spacing: AppSpacing.md,
+              runSpacing: AppSpacing.xs,
               children: [
-                Expanded(
-                  child: Text(
-                    '© ${DateTime.now().year} ${l10n.appName}. ${l10n.footerRights}',
-                    style: const TextStyle(color: Colors.white70, fontSize: 13),
-                  ),
+                Text(
+                  '© ${DateTime.now().year} ${l10n.appName}. ${l10n.footerRights}',
+                  style: const TextStyle(color: Colors.white70, fontSize: 13),
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(l10n.footerPrivacy,
-                      style: const TextStyle(color: Colors.white70)),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(l10n.footerTerms,
-                      style: const TextStyle(color: Colors.white70)),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // TODO(product): no Privacy/Terms pages exist yet.
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(l10n.footerPrivacy,
+                          style: const TextStyle(color: Colors.white70)),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(l10n.footerTerms,
+                          style: const TextStyle(color: Colors.white70)),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -107,13 +116,21 @@ class AppFooter extends StatelessWidget {
         ),
         const SizedBox(height: AppSpacing.sm),
         ...col.links.map(
-              (l) => Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4),
+          (l) => Semantics(
+            link: true,
             child: InkWell(
               onTap: () => context.go(l.path),
-              child: Text(
-                l.label,
-                style: const TextStyle(color: Colors.white70, fontSize: 14),
+              // >= 44 px tall touch target (was ~22 px).
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(minHeight: 44),
+                child: Align(
+                  alignment: AlignmentDirectional.centerStart,
+                  widthFactor: 1,
+                  child: Text(
+                    l.label,
+                    style: const TextStyle(color: Colors.white70, fontSize: 14),
+                  ),
+                ),
               ),
             ),
           ),

@@ -10,16 +10,21 @@ import '../../core/widgets/app_header.dart';
 import '../../core/widgets/app_image.dart';
 import '../../core/widgets/cards.dart';
 import '../../core/widgets/responsive_container.dart';
+import '../../core/widgets/responsive_grid.dart';
 import '../../core/widgets/section_header.dart';
 import '../../data/providers.dart';
 import '../../l10n/app_localizations.dart';
+import '../../models/impact_stat.dart';
+import '../../models/news.dart';
+import '../../models/program.dart';
+import '../../models/project.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final stats = ref.watch(impactStatsProvider);
     final projects = ref.watch(projectsProvider);
     final news = ref.watch(newsProvider);
@@ -32,7 +37,7 @@ class HomePage extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            _Hero(),
+            const _Hero(),
             const SizedBox(height: AppSpacing.section),
 
             // Impact stats
@@ -82,8 +87,9 @@ class HomePage extends ConsumerWidget {
                           subtitle: l10n.homeProjectsSubtitle,
                         ),
                       ),
-                      if (!context.isMobile)
-                        TextButton(
+                      // Shown on phones too, otherwise mobile users have no
+                      // in-page route to the full list.
+                      TextButton(
                           onPressed: () => context.go('/projects'),
                           child: Text(l10n.viewAll),
                         ),
@@ -133,8 +139,9 @@ class HomePage extends ConsumerWidget {
                           subtitle: l10n.homeNewsSubtitle,
                         ),
                       ),
-                      if (!context.isMobile)
-                        TextButton(
+                      // Shown on phones too, otherwise mobile users have no
+                      // in-page route to the full list.
+                      TextButton(
                           onPressed: () => context.go('/news'),
                           child: Text(l10n.viewAll),
                         ),
@@ -150,7 +157,7 @@ class HomePage extends ConsumerWidget {
             ),
             const SizedBox(height: AppSpacing.section),
 
-            _CallToAction(),
+            const _CallToAction(),
             const AppFooter(),
           ],
         ),
@@ -160,9 +167,13 @@ class HomePage extends ConsumerWidget {
 }
 
 class _Hero extends StatelessWidget {
+  const _Hero();
+
+  static const _heroImage = 'assets/images/hero/hero-community.jpg';
+
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final isMobile = context.isMobile;
     return Container(
       color: AppColors.primaryLight,
@@ -182,7 +193,10 @@ class _Hero extends StatelessWidget {
               borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
               child: AspectRatio(
                 aspectRatio: 4 / 3,
-                child: AppImage(path: 'assets/images/hero/hero-community.jpg'),
+                child: AppImage(
+                  path: _heroImage,
+                  semanticLabel: l10n.heroTitle,
+                ),
               ),
             ),
           ],
@@ -198,7 +212,9 @@ class _Hero extends StatelessWidget {
                 child: AspectRatio(
                   aspectRatio: 4 / 3,
                   child: AppImage(
-                      path: 'assets/images/hero/hero-community.jpg'),
+                    path: _heroImage,
+                    semanticLabel: l10n.heroTitle,
+                  ),
                 ),
               ),
             ),
@@ -239,21 +255,15 @@ class _Hero extends StatelessWidget {
 }
 
 class _StatGrid extends StatelessWidget {
-  final List items;
+  final List<ImpactStat> items;
   const _StatGrid({required this.items});
 
   @override
   Widget build(BuildContext context) {
-    final cols = context.gridCols(mobile: 2, tablet: 3, desktop: 5);
-    return GridView.count(
-      crossAxisCount: cols,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      crossAxisSpacing: AppSpacing.md,
-      mainAxisSpacing: AppSpacing.md,
-      childAspectRatio: 1.6,
+    return ResponsiveGrid(
+      columns: context.gridCols(mobile: 2, tablet: 3, desktop: 5),
       children: items
-          .map((s) => StatCard(value: s.value as String, label: s.label as String))
+          .map((s) => StatCard(value: s.value, label: s.label))
           .toList(),
     );
   }
@@ -283,101 +293,75 @@ class _MissionSection extends StatelessWidget {
 }
 
 class _ProjectGrid extends StatelessWidget {
-  final List projects;
+  final List<Project> projects;
   const _ProjectGrid({required this.projects});
 
   @override
   Widget build(BuildContext context) {
-    final cols = context.gridCols(mobile: 1, tablet: 2, desktop: 3);
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: projects.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: cols,
-        crossAxisSpacing: AppSpacing.md,
-        mainAxisSpacing: AppSpacing.md,
-        childAspectRatio: 0.72,
-      ),
-      itemBuilder: (_, i) => ProjectCard(project: projects[i]),
+    return ResponsiveGrid(
+      columns: context.gridCols(mobile: 1, tablet: 2, desktop: 3),
+      children: projects.map((p) => ProjectCard(project: p)).toList(),
     );
   }
 }
 
 class _NewsGrid extends StatelessWidget {
-  final List articles;
+  final List<NewsArticle> articles;
   const _NewsGrid({required this.articles});
 
   @override
   Widget build(BuildContext context) {
-    final cols = context.gridCols(mobile: 1, tablet: 2, desktop: 3);
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: articles.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: cols,
-        crossAxisSpacing: AppSpacing.md,
-        mainAxisSpacing: AppSpacing.md,
-        childAspectRatio: 0.85,
-      ),
-      itemBuilder: (_, i) => NewsCard(article: articles[i]),
+    return ResponsiveGrid(
+      columns: context.gridCols(mobile: 1, tablet: 2, desktop: 3),
+      children: articles.map((a) => NewsCard(article: a)).toList(),
     );
   }
 }
 
 class _ProgramGrid extends StatelessWidget {
-  final List programs;
+  final List<Program> programs;
   const _ProgramGrid({required this.programs});
 
   @override
   Widget build(BuildContext context) {
-    final cols = context.gridCols(mobile: 1, tablet: 2, desktop: 3);
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: programs.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: cols,
-        crossAxisSpacing: AppSpacing.md,
-        mainAxisSpacing: AppSpacing.md,
-        childAspectRatio: 1.6,
-      ),
-      itemBuilder: (_, i) {
-        final p = programs[i];
-        return Card(
-          child: Padding(
-            padding: const EdgeInsets.all(AppSpacing.lg),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Icon(Icons.volunteer_activism,
-                    color: AppColors.primary, size: 28),
-                const SizedBox(height: AppSpacing.sm),
-                Text(p.title,
-                    style: Theme.of(context).textTheme.titleLarge),
-                const SizedBox(height: AppSpacing.xs),
-                Expanded(
-                  child: Text(
-                    p.description,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 3,
-                  ),
+    return ResponsiveGrid(
+      columns: context.gridCols(mobile: 1, tablet: 2, desktop: 3),
+      children: programs
+          .map(
+            (p) => Card(
+              child: Padding(
+                padding: const EdgeInsets.all(AppSpacing.lg),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Icon(Icons.volunteer_activism,
+                        color: AppColors.primary, size: 28),
+                    const SizedBox(height: AppSpacing.sm),
+                    Text(p.title,
+                        style: Theme.of(context).textTheme.titleLarge),
+                    const SizedBox(height: AppSpacing.xs),
+                    Text(
+                      p.description,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 3,
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
-          ),
-        );
-      },
+          )
+          .toList(),
     );
   }
 }
 
 class _CallToAction extends StatelessWidget {
+  const _CallToAction();
+
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     return Container(
       color: AppColors.primary,
       padding: const EdgeInsets.symmetric(vertical: AppSpacing.section),

@@ -15,7 +15,7 @@ class TransparencyPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final reports = ref.watch(reportsProvider);
 
     return Scaffold(
@@ -50,8 +50,7 @@ class TransparencyPage extends ConsumerWidget {
                 children: [
                   SectionHeader(title: l10n.transparencyFinancial),
                   Text(
-                    '${l10n.transparencyFinancial}: 87% of funds go directly to programs, 8% to operations, 5% to fundraising. '
-                        'Full details are available in the annual reports below.',
+                    l10n.transparencyFinancialText,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   const SizedBox(height: AppSpacing.section),
@@ -59,15 +58,65 @@ class TransparencyPage extends ConsumerWidget {
                   reports.when(
                     data: (list) => Column(
                       children: list.map((r) {
-                        return Card(
-                          child: ListTile(
-                            leading: const Icon(Icons.picture_as_pdf,
-                                color: AppColors.primary),
-                            title: Text(r['title'] as String),
-                            subtitle: Text(r['size'] as String? ?? ''),
-                            trailing: TextButton(
-                              onPressed: () {},
-                              child: Text(l10n.downloadPdf),
+                        final title = r['title'] as String? ?? '';
+                        final size = r['size'] as String? ?? '';
+                        final download = TextButton.icon(
+                          // The PDFs are not in assets/reports yet and the
+                          // app has no URL-opening package, so tell the user
+                          // instead of silently doing nothing.
+                          onPressed: () => ScaffoldMessenger.of(context)
+                            ..hideCurrentSnackBar()
+                            ..showSnackBar(
+                              SnackBar(content: Text(l10n.reportUnavailable)),
+                            ),
+                          icon: const Icon(Icons.download, size: 18),
+                          label: Text(l10n.downloadPdf),
+                        );
+                        return Padding(
+                          padding:
+                              const EdgeInsets.only(bottom: AppSpacing.sm),
+                          child: Card(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: AppSpacing.md,
+                                  vertical: AppSpacing.sm),
+                              // Wrap: the button drops below the title on
+                              // narrow phones instead of squeezing it.
+                              child: Wrap(
+                                crossAxisAlignment: WrapCrossAlignment.center,
+                                alignment: WrapAlignment.spaceBetween,
+                                spacing: AppSpacing.md,
+                                runSpacing: AppSpacing.xs,
+                                children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      const Icon(Icons.picture_as_pdf,
+                                          color: AppColors.primary),
+                                      const SizedBox(width: AppSpacing.md),
+                                      Flexible(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Text(title,
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .titleMedium),
+                                            if (size.isNotEmpty)
+                                              Text(size,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .bodySmall),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  download,
+                                ],
+                              ),
                             ),
                           ),
                         );
@@ -79,8 +128,7 @@ class TransparencyPage extends ConsumerWidget {
                   const SizedBox(height: AppSpacing.section),
                   SectionHeader(title: l10n.transparencyGovernance),
                   Text(
-                    'Registered as a non-profit organization. Governance is provided '
-                        'by an independent board. Policies available on request.',
+                    l10n.transparencyGovernanceText,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ],

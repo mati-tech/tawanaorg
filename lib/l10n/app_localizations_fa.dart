@@ -415,4 +415,94 @@ class AppLocalizationsFa extends AppLocalizations {
   @override
   String get contactFormSuccess =>
       'از تماس شما سپاسگزاریم. ارسال آنلاین به‌زودی در دسترس خواهد بود.';
+
+  @override
+  String get projectsEmpty =>
+      'هیچ پروژه‌ای با جستجو یا فیلتر شما مطابقت ندارد.';
+
+  @override
+  String get newsEmpty => 'هنوز هیچ خبری نشر نشده است.';
+
+  @override
+  String get projectNotFound => 'این پروژه پیدا نشد.';
+
+  @override
+  String get articleNotFound => 'این مقاله پیدا نشد.';
+
+  @override
+  String get projectOverview => 'مرور کلی';
+
+  @override
+  String get projectChallenge => 'چالش';
+
+  @override
+  String get projectApproach => 'رویکرد ما';
+
+  @override
+  String get projectResults => 'نتایج';
+
+  @override
+  String get formRequired => 'این بخش الزامی است.';
+
+  @override
+  String get formInvalidEmail => 'لطفاً یک آدرس ایمیل معتبر وارد کنید.';
+
+  @override
+  String get transparencyFinancialText =>
+      '۸۷٪ وجوه مستقیماً به برنامه‌ها، ۸٪ به امور عملیاتی و ۵٪ به جمع‌آوری کمک‌ها اختصاص می‌یابد. جزئیات کامل در گزارش‌های سالانه زیر موجود است.';
+
+  @override
+  String get transparencyGovernanceText =>
+      'به‌عنوان یک نهاد غیرانتفاعی ثبت شده است. نظارت و رهبری آن توسط یک هیئت مستقل انجام می‌شود. پالیسی‌ها در صورت درخواست ارائه می‌شوند.';
+
+  @override
+  String get reportUnavailable =>
+      'این گزارش به‌زودی برای دانلود در دسترس خواهد بود.';
+
+  @override
+  String get donateWhyText =>
+      'کمک شما آموزش، خدمات صحی و امداد اضطراری را برای خانواده‌هایی که بیشترین نیاز را دارند فراهم می‌کند.';
+
+  @override
+  String get donateWhereText =>
+      '۸۷٪ هر کمک مستقیماً به برنامه‌ها می‌رسد. ۸٪ هزینه‌های عملیاتی و ۵٪ جمع‌آوری کمک‌ها را پوشش می‌دهد.';
+
+  @override
+  String get donateOptionsText =>
+      'کمک یک‌باره · کمک ماهانه · کمک‌های جنسی · کمک‌های مشترک شرکت‌ها';
+
+  @override
+  String get donateBankLabel => 'بانک';
+
+  @override
+  String get donateAccountLabel => 'نام حساب';
+
+  @override
+  String get donateReferenceLabel => 'توضیح پرداخت';
+
+  @override
+  String get donateReferenceValue => 'کمک خیریه';
+
+  @override
+  String get donateFaq1Q => 'آیا کمک من از مالیات قابل کسر است؟';
+
+  @override
+  String get donateFaq1A =>
+      'بله، در حوزه‌هایی که بنیاد در آن ثبت شده است. برای جزئیات با ما تماس بگیرید.';
+
+  @override
+  String get donateFaq2Q => 'آیا می‌توانم کمک ماهانه را لغو کنم؟';
+
+  @override
+  String get donateFaq2A => 'بله، در هر زمان. کافی است با دفتر ما تماس بگیرید.';
+
+  @override
+  String get donateFaq3Q => 'چگونه بدانم کمک من به‌درستی استفاده می‌شود؟';
+
+  @override
+  String get donateFaq3A =>
+      'برای گزارش‌های کامل مالی، صفحهٔ شفافیت ما را ببینید.';
+
+  @override
+  String get contactHoursValue => 'دوشنبه تا جمعه، ۹:۰۰ تا ۱۷:۰۰';
 }

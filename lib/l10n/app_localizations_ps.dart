@@ -415,4 +415,94 @@ class AppLocalizationsPs extends AppLocalizations {
   @override
   String get contactFormSuccess =>
       'ستاسو د اړیکې لپاره مننه. آنلاین سپارل به ژر شتون ولري.';
+
+  @override
+  String get projectsEmpty =>
+      'ستاسو له لټون یا فلټر سره سمه هېڅ پروژه ونه موندل شوه.';
+
+  @override
+  String get newsEmpty => 'تر اوسه هېڅ خبر نه دی خپور شوی.';
+
+  @override
+  String get projectNotFound => 'دا پروژه ونه موندل شوه.';
+
+  @override
+  String get articleNotFound => 'دا مقاله ونه موندل شوه.';
+
+  @override
+  String get projectOverview => 'لنډه کتنه';
+
+  @override
+  String get projectChallenge => 'ننګونه';
+
+  @override
+  String get projectApproach => 'زموږ تګلاره';
+
+  @override
+  String get projectResults => 'پایلې';
+
+  @override
+  String get formRequired => 'دا برخه اړینه ده.';
+
+  @override
+  String get formInvalidEmail => 'مهرباني وکړئ یو سم برېښنالیک پته ولیکئ.';
+
+  @override
+  String get transparencyFinancialText =>
+      '۸۷٪ پیسې مستقیماً پروګرامونو ته، ۸٪ عملیاتو ته او ۵٪ د مرستو راټولولو ته ځي. بشپړ جزییات لاندې کلني راپورونو کې شته.';
+
+  @override
+  String get transparencyGovernanceText =>
+      'د یوې غیرانتفاعي ادارې په توګه ثبت شوې ده. څارنه او رهبري یې د یوه خپلواک بورډ له خوا کېږي. پالیسۍ د غوښتنې پر بنسټ وړاندې کېږي.';
+
+  @override
+  String get reportUnavailable => 'دا راپور به ژر د ډاونلوډ لپاره شتون ولري.';
+
+  @override
+  String get donateWhyText =>
+      'ستاسو مرسته هغو کورنیو ته چې ډېره اړتیا لري، زده کړه، روغتیایي خدمتونه او بېړنۍ مرسته برابروي.';
+
+  @override
+  String get donateWhereText =>
+      'د هرې مرستې ۸۷٪ مستقیماً پروګرامونو ته ځي. ۸٪ عملیاتي لګښتونه او ۵٪ د مرستو راټولول پوښي.';
+
+  @override
+  String get donateOptionsText =>
+      'یو ځلې مرسته · میاشتنۍ مرسته · جنسي مرستې · د شرکتونو ګډې مرستې';
+
+  @override
+  String get donateBankLabel => 'بانک';
+
+  @override
+  String get donateAccountLabel => 'د حساب نوم';
+
+  @override
+  String get donateReferenceLabel => 'د تادیې یادونه';
+
+  @override
+  String get donateReferenceValue => 'خیریه مرسته';
+
+  @override
+  String get donateFaq1Q => 'ایا زما مرسته له مالیې څخه کمېدای شي؟';
+
+  @override
+  String get donateFaq1A =>
+      'هو، په هغو سیمو کې چې بنسټ پکې ثبت شوی دی. د جزییاتو لپاره موږ سره اړیکه ونیسئ.';
+
+  @override
+  String get donateFaq2Q => 'ایا زه کولای شم میاشتنۍ مرسته لغوه کړم؟';
+
+  @override
+  String get donateFaq2A => 'هو، هر وخت. یوازې زموږ له دفتر سره اړیکه ونیسئ.';
+
+  @override
+  String get donateFaq3Q =>
+      'زه څنګه پوه شم چې زما مرسته په سمه توګه کارول کېږي؟';
+
+  @override
+  String get donateFaq3A =>
+      'د بشپړو مالي راپورونو لپاره زموږ د روڼتیا پاڼه وګورئ.';
+
+  @override
+  String get contactHoursValue => 'له دوشنبې تر جمعې، ۹:۰۰ تر ۱۷:۰۰';
 }
