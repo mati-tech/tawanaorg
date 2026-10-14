@@ -190,10 +190,10 @@
 
   "team": {
     "en": [
-      { "id": "t1", "name": "Kamal Sayed Al-Ahmad", "position": "President of Tawana Charity and Development Foundation", "biography": "Founder and president of the foundation, leading its overall mission and strategy.", "photo": "assets/images/team/kamal.jpg", "group": "leadership" },
-      { "id": "t2", "name": "Abuzar Saram Sarpoli", "position": "Vice President of Tawana Charity and Development Foundation", "biography": "Supports the president and coordinates the foundation's operations.", "photo": "assets/images/team/abuzar.jpg", "group": "leadership" },
+      { "id": "t1", "name": "Kamal C.A Yaktam", "position": "President of Tawana Charity and Development Foundation", "biography": "Founder and president of the foundation, leading its overall mission and strategy.", "photo": "assets/images/team/kamal.jpg", "group": "leadership" },
+      { "id": "t2", "name": "Abozar Sarem Sarepole", "position": "Vice President of Tawana Charity and Development Foundation", "biography": "Supports the president and coordinates the foundation's operations.", "photo": "assets/images/team/abuzar.jpg", "group": "leadership" },
       { "id": "t3", "name": "Pariwash Lodin", "position": "Executive Director and Head of Health Department", "biography": "Leads the foundation's health programs and daily operations.", "photo": "assets/images/team/pariwash.jpg", "group": "leadership" },
-      { "id": "t4", "name": "Zahra Moradi", "position": "Head of Education and Culture Department", "biography": "Responsible for the foundation's educational and cultural programs.", "photo": "assets/images/team/zahra.jpg", "group": "leadership" },
+      { "id": "t4", "name": "Zahra Muradi", "position": "Head of Education and Culture Department", "biography": "Responsible for the foundation's educational and cultural programs.", "photo": "assets/images/team/zahra.jpg", "group": "leadership" },
       { "id": "t5", "name": "Matiullah Aziz", "position": "Head of IT and Publications Department", "biography": "Manages the foundation's technology, media and publications.", "photo": "assets/images/team/matiullah.jpg", "group": "leadership" }
     ],
 
@@ -201,7 +201,7 @@
       { "id": "t1", "name": "Камаль Сайед Аль-Ахмад", "position": "Президент Благотворительного фонда «Тавана»", "biography": "Основатель и президент фонда, руководит его миссией и стратегией.", "photo": "assets/images/team/kamal.jpg", "group": "leadership" },
       { "id": "t2", "name": "Абузар Сарам Сарполи", "position": "Вице-президент Благотворительного фонда «Тавана»", "biography": "Поддерживает президента и координирует деятельность фонда.", "photo": "assets/images/team/abuzar.jpg", "group": "leadership" },
       { "id": "t3", "name": "Париваш Лудин", "position": "Исполнительный директор и руководитель отдела здравоохранения", "biography": "Руководит программами здравоохранения и повседневной деятельностью фонда.", "photo": "assets/images/team/pariwash.jpg", "group": "leadership" },
-      { "id": "t4", "name": "Захра Моради", "position": "Руководитель отдела образования и культуры", "biography": "Отвечает за образовательные и культурные программы фонда.", "photo": "assets/images/team/zahra.jpg", "group": "leadership" },
+      { "id": "t4", "name": "Захра Муради", "position": "Руководитель отдела образования и культуры", "biography": "Отвечает за образовательные и культурные программы фонда.", "photo": "assets/images/team/zahra.jpg", "group": "leadership" },
       { "id": "t5", "name": "Матиулла Азиз", "position": "Руководитель отдела ИТ и публикаций", "biography": "Управляет технологиями, медиа и публикациями фонда.", "photo": "assets/images/team/matiullah.jpg", "group": "leadership" }
     ],
 
